@@ -1,15 +1,28 @@
-import React from "react"
-import {Main, Title}  from "./style"
+import React, { useState } from "react"
+import {ThemeProvider}  from "styled-components"
+// import usePersistedState from "./utils/usePersistedState"
 
+import { Header } from "./Components/Header"
+import GlobalStyles from './Styles/global'
+import dark from './Styles/themes/dark'
+import light from './Styles/themes/light'
 
 function App() {
+const [theme, setTheme] = useState(dark);
 
+function toggleTheme () {
+  setTheme(theme === dark ?  light :  dark);
+}
+  
   return (
-    <Main>
-      <Title fontSize={2}>Site em desenvolvimento! </Title>
-      <p>Um website <a href="http://">incrível</a> está por vir! </p>
-    </Main>
+    <ThemeProvider theme={theme}>
+    <GlobalStyles/>
+    <Header
+    toggleTheme={toggleTheme}
+    />
+    </ThemeProvider>
   )
+
 }
 
 export default App
