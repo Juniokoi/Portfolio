@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
 *,
 *::before,
@@ -15,5 +15,11 @@ body {
   font-weight: 400;
   color: #333;
   background-color: ${props => props.theme.colors.background};
+
+  
+  button {
+    border: none;
+    background-color: transparent;
+  }
 }
 `

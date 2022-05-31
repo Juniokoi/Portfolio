@@ -1,10 +1,11 @@
 export default {
-  title: "dark",
+  title: 'dark',
   colors: {
-      primary: '#0070f3',
-      secondary: '#222',
+    text: '#F8F8F2',
+    background: '#282A36',
 
-      background: '#444',
-      text: '#f0f0f5',
-  },
-} 
+    error: '#E64553',
+    correct: '#0DC985',
+    brackets: '#54C7F4'
+  }
+}

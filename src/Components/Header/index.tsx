@@ -1,19 +1,20 @@
-import React from "react";
+import React from 'react'
 
-import {Container} from './style'
-import ThemeSwitcher from "../ThemeSwitcher";
+import { Button, Container } from './style'
+import ThemeSwitcher from './ThemeSwitcher'
 
 interface Props {
   toggleTheme: () => void;
 }
-export function Header( {toggleTheme} : Props) {
-
+export function Header ({ toggleTheme } : Props) {
   return (
     <Container>
-      Hello World
-      <ThemeSwitcher 
+      <Button>
+        minhas redes
+      </Button>
+      <ThemeSwitcher
       toggleTheme={toggleTheme}
       />
     </Container>
-  );
+  )
 }
