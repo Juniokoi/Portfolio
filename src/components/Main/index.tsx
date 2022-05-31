@@ -10,11 +10,11 @@ export function Main() {
   let star, wavy: string
 
   if (title === 'dark') {
-    star = 'Assets/icons/whiteStar.svg'
-    wavy = 'Assets/icons/whiteWavy.svg'
+    star = 'assets/icons/whiteStar.svg'
+    wavy = 'assets/icons/whiteWavy.svg'
   } else {
-    star = 'Assets/icons/darkStar.svg'
-    wavy = 'Assets/icons/darkWavy.svg'
+    star = 'assets/icons/darkStar.svg'
+    wavy = 'assets/icons/darkWavy.svg'
   }
 
   const TypeAnimation = () => (

@@ -21,8 +21,8 @@ function ThemeSwitcher({ toggleTheme }: Props) {
       >
         {
           title === 'light'
-            ? <img src={'Assets/icons/sun.svg'} alt="Sun Icon" />
-            : <img src={'Assets/icons/moon.svg'} alt="Moon icon"
+            ? <img src={'assets/icons/sun.svg'} alt="Sun Icon" />
+            : <img src={'assets/icons/moon.svg'} alt="Moon icon"
             />
         }
       </ThemeButton>
