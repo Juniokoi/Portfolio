@@ -1,7 +1,7 @@
-import React from 'react'
-import { Index } from './Pages/Index'
+import * as React from 'react'
+import Index from './pages'
 
-function App () {
+function App() {
   return (
     <>
       <Index />

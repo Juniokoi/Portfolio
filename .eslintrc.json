@@ -5,6 +5,7 @@
     },
     "extends": [
         "plugin:react/recommended",
+        "next/core-web-vitals",
         "standard"
     ],
     "parser": "@typescript-eslint/parser",
@@ -19,6 +20,5 @@
         "react",
         "@typescript-eslint"
     ],
-    "rules": {
-    }
+    "rules": {}
 }
