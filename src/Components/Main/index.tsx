@@ -26,10 +26,10 @@ export function Main () {
   <>
     <Animating
       strings={[
-        'Eu sou um <em>Full Stack Developer</em> 🧑‍💻',
-        'Eu sou um <strong>apaixonado</strong> por desenvolvimento 🧑‍💻',
-        'Eu sou um <strong>apaixonado</strong> por tecnologia ✨',
-        'Eu amo Web Design ✒️'
+        'Eu sou um <em>Front End Developer</em> 🧑‍💻',
+        'Eu sou um <strong>apaixonado</strong> por <em>tecnologia</em> ✨',
+        'Eu sou um <strong>apaixonado</strong> por <em>desenvolvimento</em> 🧑‍💻',
+        'Eu <strong>amo</strong> Web Design ✒️'
       ]}
       typeSpeed={50}
       backSpeed={50}

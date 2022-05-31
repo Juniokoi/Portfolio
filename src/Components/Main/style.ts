@@ -63,4 +63,5 @@ export const Code = styled.p`
     color: ${props => props.theme.colors.text};
     font-weight: 700;
   }
+
 `
