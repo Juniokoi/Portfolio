@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,18 +17,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": [
-    "src"
-, "src/pages"  ],
+  "include": ["src", "pages", "src/style.d.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
   ],
-  "files": [
-    "src/style.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "files": ["src/style.d.ts"],
+  "exclude": ["node_modules"]
 }

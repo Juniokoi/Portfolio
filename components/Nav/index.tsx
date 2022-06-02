@@ -6,24 +6,16 @@ export function Nav() {
     <Container>
       <ul>
         <li>
-          <a href="#">
-            Inicio
-          </a>
+          <a href="#">Inicio</a>
         </li>
         <li>
-          <a href="#">
-            Sobre
-          </a>
+          <a href="#">Sobre</a>
         </li>
         <li>
-          <a href="#">
-            Projetos
-          </a>
+          <a href="#">Projetos</a>
         </li>
         <li>
-          <a href="#">
-            Baixar CV
-          </a>
+          <a href="#">Baixar CV</a>
         </li>
       </ul>
     </Container>

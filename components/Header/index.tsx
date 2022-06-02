@@ -4,17 +4,13 @@ import { Button, Container } from './style'
 import ThemeSwitcher from './ThemeSwitcher'
 
 interface Props {
-  toggleTheme: () => void;
+  toggleTheme: () => void
 }
 export function Header({ toggleTheme }: Props) {
   return (
     <Container>
-      <Button>
-        minhas redes
-      </Button>
-      <ThemeSwitcher
-        toggleTheme={toggleTheme}
-      />
+      <Button>minhas redes</Button>
+      <ThemeSwitcher toggleTheme={toggleTheme} />
     </Container>
   )
 }
