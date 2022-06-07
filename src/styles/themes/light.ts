@@ -1,11 +1,11 @@
 export default {
   title: 'light',
   colors: {
-    text: '#272834',
+    text: '#272A36',
     background: '#F4F4F0',
 
     error: '#FF6E6E',
     correct: '#40A02B',
-    brackets: '#1E66F5'
-  }
+    brackets: '#1E66F5',
+  },
 }

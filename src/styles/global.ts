@@ -14,7 +14,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: #333;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
 
   
   button {

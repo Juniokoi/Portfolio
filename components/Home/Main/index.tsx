@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import * as React from 'react'
 import { useContext } from 'react'
 import Animating from 'react-typed'
@@ -17,13 +18,13 @@ export function Main() {
   let star, wavy, profile: string
 
   if (title === 'dark') {
-    star = 'icons/whiteStar.svg'
-    wavy = 'icons/whiteWavy.svg'
-    profile = 'images/profileDark.png'
+    star = '/icons/whiteStar.svg'
+    wavy = '/icons/whiteWavy.svg'
+    profile = '/images/profileDark.png'
   } else {
-    star = 'icons/darkStar.svg'
-    wavy = 'icons/darkWavy.svg'
-    profile = 'images/profile.png'
+    star = '/icons/darkStar.svg'
+    wavy = '/icons/darkWavy.svg'
+    profile = '/images/profile.png'
   }
 
   const TypeAnimation = () => (
@@ -53,10 +54,10 @@ export function Main() {
     <Wrapper>
       <Container>
         <div className="firstStar">
-          <img src={star} alt="Star Icon" />
+          <Image src={star} alt="Star Icon" width={64} height={64} />
         </div>
         <div className="wavy">
-          <img src={wavy} alt="" />
+          <Image src={wavy} alt="" width={64} height={16} />
         </div>
 
         <FatFont>Oi! </FatFont>
@@ -65,7 +66,7 @@ export function Main() {
         <FatFont>Junio Koi</FatFont>
 
         <div className="lastStar">
-          <img src={star} alt="Star Icon" />
+          <Image src={star} alt="Star Icon" width={64} height={64} />
         </div>
         <div className="code">
           <CodeBracket>&lt;</CodeBracket>
@@ -76,7 +77,7 @@ export function Main() {
         </div>
       </Container>
       <div className="profile">
-        <img src={profile} alt="" />
+        <Image src={profile} alt="" width={384} height={352} />
       </div>
     </Wrapper>
   )

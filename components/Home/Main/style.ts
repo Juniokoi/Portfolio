@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../src/styles'
+import theme from '../../../src/styles'
 
 export const FatFont = styled.h2`
   font-family: ${theme.fonts.fat};
@@ -21,28 +21,31 @@ export const Container = styled.div`
   justify-content: end;
 
   .firstStar {
-    img {
+    * {
       position: relative;
       left: -4rem;
       top: 4rem;
     }
   }
   .lastStar {
-    img {
+    * {
       position: relative;
-      right: -19rem;
+      right: -18rem;
       top: -2.2rem;
+      width: auto;
+      height: auto;
     }
   }
   .wavy {
     position: relative;
     left: 0.5rem;
     top: 0rem;
-    img {
+    * {
       width: 75px;
       height: auto;
     }
   }
+
   .code {
     height: 150px;
     max-width: 542px;
@@ -52,7 +55,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 150px;
+  margin-top: 50px;
 `
 
 export const CodeBracket = styled.p`

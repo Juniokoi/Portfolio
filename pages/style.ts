@@ -5,5 +5,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 90px 15vw;
+  padding: 5vh 10vw;
+  background-color: ${(props) => props.theme.colors.background};
 `

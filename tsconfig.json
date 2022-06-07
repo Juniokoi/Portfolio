@@ -17,12 +17,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["src", "pages", "src/style.d.ts"],
+  "include": ["src", "pages", "style.d.ts", "src/styles"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
   ],
-  "files": ["src/style.d.ts"],
+  "files": ["style.d.ts"],
   "exclude": ["node_modules"]
 }

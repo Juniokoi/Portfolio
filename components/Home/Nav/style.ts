@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../src/styles/index'
+import theme from '../../../src/styles/index'
 
 export const Container = styled.nav`
   ul {
@@ -7,7 +7,7 @@ export const Container = styled.nav`
     flex-direction: row;
     justify-content: space-between;
 
-    margin-top: 150px;
+    margin-top: 100px;
 
     font-family: ${theme.fonts.fat};
 
