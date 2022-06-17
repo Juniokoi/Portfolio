@@ -6,16 +6,17 @@ export default createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+  -webkit-transition:all .3s ease-out;
+  transition:all .3s ease-out;
+  -moz-transition: all .3s ease-out;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 100%;
   line-height: 1.5;
   font-weight: 400;
   color: #333;
-  
+
   button {
     border: none;
     background-color: transparent;
