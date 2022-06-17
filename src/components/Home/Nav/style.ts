@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../src/styles/index'
+import theme from '../../../styles'
 
 export const Container = styled.nav`
   @media (max-width: ${theme.screenSize.desktop}) {

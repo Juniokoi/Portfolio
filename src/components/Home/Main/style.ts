@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../src/styles'
+import theme from '../../../styles'
 
 export const FatFont = styled.h2`
   font-family: ${theme.fonts.fat};

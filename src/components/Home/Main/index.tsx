@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import * as React from 'react'
 import { useContext, useEffect } from 'react'
 import { ThemeContext } from 'styled-components'
@@ -27,7 +26,7 @@ export function Main() {
   return (
     <Wrapper>
       <Container>
-        <Image
+        <img
           className="firstStar"
           src={star}
           alt="Star Icon"
@@ -36,7 +35,7 @@ export function Main() {
         />
 
         <div className="wavy">
-          <Image src={wavy} alt="" width={64} height={16} />
+          <img src={wavy} alt="" width={64} height={16} />
         </div>
 
         <FatFont>Oi! </FatFont>
@@ -44,7 +43,7 @@ export function Main() {
         <br />
         <FatFont>Junio Koi</FatFont>
 
-        <Image
+        <img
           className="lastStar"
           src={star}
           alt="Star Icon"
@@ -55,7 +54,7 @@ export function Main() {
         {/* <TypeAnimation /> */}
       </Container>
       <div className="profile">
-        <Image src={profile} alt="" width={384} height={352} />
+        <img src={profile} alt="" width={384} height={352} />
       </div>
     </Wrapper>
   )
