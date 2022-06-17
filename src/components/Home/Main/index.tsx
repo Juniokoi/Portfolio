@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { useContext, useEffect } from 'react'
+import React from 'react'
+import { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
-import { FatFont, BodyFont, Container, Wrapper } from './style'
+import { FatFont, Container, Wrapper } from './style'
 import TypeAnimation from './TypeAnimation'
 
 let star: string, wavy: string, profile: string
@@ -26,36 +26,27 @@ export function Main() {
   return (
     <Wrapper>
       <Container>
-        <img
-          className="firstStar"
-          src={star}
-          alt="Star Icon"
-          width={64}
-          height={64}
-        />
+        <img className="firstStar" src={star} alt="Star Icon" />
 
         <div className="wavy">
-          <img src={wavy} alt="" width={64} height={16} />
+          <img src={wavy} alt="Simple wavy icon" />
         </div>
 
-        <FatFont>Oi! </FatFont>
-        <BodyFont>Eu sou</BodyFont>
-        <br />
-        <FatFont>Junio Koi</FatFont>
+        <FatFont>
+          Oi!<span>Eu sou</span>
+          <br />
+          Junio Koi
+        </FatFont>
 
-        <img
-          className="lastStar"
-          src={star}
-          alt="Star Icon"
-          width={64}
-          height={64}
-        />
+        <img className="lastStar" src={star} alt="Star Icon" />
 
         {/* <TypeAnimation /> */}
       </Container>
-      <div className="profile">
-        <img src={profile} alt="" width={384} height={352} />
-      </div>
+      <img
+        className="profile"
+        src={profile}
+        alt="Uma foto de perfil do Junio Koi"
+      />
     </Wrapper>
   )
 }

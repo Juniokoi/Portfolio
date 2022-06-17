@@ -12,6 +12,7 @@ export const Container = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 5rem;
 
     margin-top: 100px;
 

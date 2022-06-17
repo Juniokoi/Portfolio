@@ -15,7 +15,7 @@ export function Nav() {
           <a href="#">Projetos</a>
         </li>
         <li>
-          <a href="#">Baixar CV</a>
+          <a href="#">Contato</a>
         </li>
       </ul>
     </Container>
