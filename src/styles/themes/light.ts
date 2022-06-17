@@ -8,4 +8,7 @@ export default {
     correct: '#40A02B',
     brackets: '#1E66F5',
   },
+  backgroundImage: {
+    src: '/assets/WhiteBackground.png',
+  },
 }

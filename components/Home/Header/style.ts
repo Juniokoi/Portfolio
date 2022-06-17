@@ -6,8 +6,11 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background-color: ${(props) => props.theme.colors.background};
+  /* background-color: ${(props) => props.theme.colors.background}; */
   color: ${(props) => props.theme.colors.text};
+  @media (max-width: ${theme.screenSize.desktop}) {
+    display: none;
+  }
 `
 export const Button = styled.button`
   background-color: transparent;
@@ -17,4 +20,7 @@ export const Button = styled.button`
   color: ${(props) => props.theme.colors.background};
   padding-right: 32px;
   cursor: pointer;
+  @media (max-width: ${theme.screenSize.desktop}) {
+    display: none;
+  }
 `

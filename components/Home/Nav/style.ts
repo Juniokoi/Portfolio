@@ -2,6 +2,12 @@ import styled from 'styled-components'
 import theme from '../../../src/styles/index'
 
 export const Container = styled.nav`
+  @media (max-width: ${theme.screenSize.desktop}) {
+    ul,
+    li {
+      display: none;
+    }
+  }
   ul {
     display: flex;
     flex-direction: row;

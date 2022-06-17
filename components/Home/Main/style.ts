@@ -15,25 +15,26 @@ export const BodyFont = styled.h2`
   font-weight: 400;
   line-height: 2rem;
   display: inline;
+  @media (max-width: ${theme.screenSize.desktop}) {
+    width: 100%;
+  }
 `
 export const Container = styled.div`
   align-items: left;
   justify-content: end;
 
-  .firstStar {
-    * {
-      position: relative;
-      left: -4rem;
-      top: 4rem;
-    }
+  & img:first-child {
+    position: relative;
+    left: -4rem;
+    top: 4rem !important;
   }
   .lastStar {
     * {
       position: relative;
       right: -18rem;
       top: -2.2rem;
-      width: auto;
-      height: auto;
+      max-width: 270px;
+      height: 0;
     }
   }
   .wavy {
@@ -46,9 +47,20 @@ export const Container = styled.div`
     }
   }
 
-  .code {
-    height: 150px;
-    max-width: 542px;
+  @media (max-width: ${theme.screenSize.desktop}) {
+    justify-content: center;
+    align-items: center;
+    max-width: 277px;
+    .firstStar {
+      * {
+        left: -2rem;
+      }
+    }
+    .lastStar {
+      * {
+        right: -10rem;
+      }
+    }
   }
 `
 export const Wrapper = styled.div`
@@ -56,24 +68,9 @@ export const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-top: 50px;
-`
 
-export const CodeBracket = styled.p`
-  font-family: ${theme.fonts.code};
-  font-size: 2rem;
-  display: inline;
-  color: ${(props) => props.theme.colors.brackets};
-  font-weight: 400;
-`
-export const Code = styled.p`
-  font-family: ${theme.fonts.code};
-  font-size: 2.6rem;
-  display: inline;
-  color: ${(props) => props.theme.colors.correct};
-  max-height: 100px;
-  font-weight: '700';
-  .typed-cursor {
-    color: ${(props) => props.theme.colors.text};
-    font-weight: 700;
+  @media (max-width: ${theme.screenSize.desktop}) {
+    flex-direction: column;
+    align-items: center;
   }
 `

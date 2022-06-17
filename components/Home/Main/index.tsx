@@ -1,23 +1,14 @@
 import Image from 'next/image'
 import * as React from 'react'
-import { useContext } from 'react'
-import Animating from 'react-typed'
-
+import { useContext, useEffect } from 'react'
 import { ThemeContext } from 'styled-components'
-import {
-  FatFont,
-  BodyFont,
-  Container,
-  CodeBracket,
-  Code,
-  Wrapper,
-} from './style'
+import { FatFont, BodyFont, Container, Wrapper } from './style'
+import TypeAnimation from './TypeAnimation'
 
-export function Main() {
-  const { title } = useContext(ThemeContext)
-  let star, wavy, profile: string
+let star: string, wavy: string, profile: string
 
-  if (title === 'dark') {
+function changeImages(theme: string) {
+  if (theme === 'dark') {
     star = '/icons/whiteStar.svg'
     wavy = '/icons/whiteWavy.svg'
     profile = '/images/profileDark.png'
@@ -26,36 +17,24 @@ export function Main() {
     wavy = '/icons/darkWavy.svg'
     profile = '/images/profile.png'
   }
+}
 
-  const TypeAnimation = () => (
-    <>
-      <Animating
-        strings={[
-          'Eu sou um <em>Front End Developer</em> 🧑‍💻',
-          'Eu sou <strong>apaixonado</strong> por <em>tecnologia</em> ✨',
-          'Eu sou <strong>apaixonado</strong> por <em>desenvolvimento</em>',
-          'Eu <strong>amo</strong> Web Design ✒️',
-        ]}
-        typeSpeed={50}
-        backSpeed={50}
-        backDelay={2000}
-        fadeOut={false}
-        loop
-        shuffle={false}
-        showCursor={true}
-        autoInsertCss={true}
-        smartBackspace={true}
-        bindInputFocusEvents={true}
-      />
-    </>
-  )
+export function Main() {
+  const { title } = useContext(ThemeContext)
+
+  changeImages(title)
 
   return (
     <Wrapper>
       <Container>
-        <div className="firstStar">
-          <Image src={star} alt="Star Icon" width={64} height={64} />
-        </div>
+        <Image
+          className="firstStar"
+          src={star}
+          alt="Star Icon"
+          width={64}
+          height={64}
+        />
+
         <div className="wavy">
           <Image src={wavy} alt="" width={64} height={16} />
         </div>
@@ -65,16 +44,15 @@ export function Main() {
         <br />
         <FatFont>Junio Koi</FatFont>
 
-        <div className="lastStar">
-          <Image src={star} alt="Star Icon" width={64} height={64} />
-        </div>
-        <div className="code">
-          <CodeBracket>&lt;</CodeBracket>
-          <Code>
-            <TypeAnimation />
-          </Code>
-          <CodeBracket>&#47;&gt; </CodeBracket>
-        </div>
+        <Image
+          className="lastStar"
+          src={star}
+          alt="Star Icon"
+          width={64}
+          height={64}
+        />
+
+        {/* <TypeAnimation /> */}
       </Container>
       <div className="profile">
         <Image src={profile} alt="" width={384} height={352} />

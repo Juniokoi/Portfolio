@@ -17,7 +17,7 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["src", "pages", "style.d.ts", "src/styles"],
+  "include": ["src", "pages", "style.d.ts", "public/styles"],
   "references": [
     {
       "path": "./tsconfig.node.json"

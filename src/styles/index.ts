@@ -5,7 +5,7 @@ const colors = {
 } as const
 
 const fonts = {
-  body: '"Source Sans Pro", Helvetica, Arial, sans-serif',
+  body: '"DM Sans", Helvetica, Arial, sans-serif',
   fat: '"Abril Fatface", Helvetica, Arial, sans-serif',
   code: '"JetBrains Mono", Consolas , Courier, monospace',
 } as const
@@ -15,4 +15,11 @@ const fontWeights = {
   Bold: 700,
 } as const
 
-export default { colors, fonts, fontWeights }
+const screenSize = {
+  mobile: '320px',
+  tablet: '768px',
+  desktop: '1024px',
+  desktopLg: '1440px',
+} as const
+
+export default { colors, fonts, fontWeights, screenSize }

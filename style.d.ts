@@ -12,5 +12,9 @@ declare module 'styled-components' {
       correct: string
       brackets: string
     }
+
+    backgroundImage: {
+      src: string
+    }
   }
 }

@@ -12,7 +12,7 @@ export default function Document() {
           type="image/x-icon"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </Head>

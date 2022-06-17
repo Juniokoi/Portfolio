@@ -12,6 +12,7 @@ import { Container } from './style'
 import { Header } from '../components/Home/Header'
 import { Main } from '../components/Home/Main'
 import { Nav } from '../components/Home/Nav'
+import About from '../components/About'
 
 export default function Home() {
   const [theme, setTheme] = useState(dark)
@@ -32,9 +33,12 @@ export default function Home() {
         <GlobalStyles />
 
         <Container>
-          <Header toggleTheme={toggleTheme} />
-          <Main />
-          <Nav />
+          <div className="header">
+            <Header toggleTheme={toggleTheme} />
+            <Main />
+            <Nav />
+          </div>
+          <About />
         </Container>
       </ThemeProvider>
     </>

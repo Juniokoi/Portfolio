@@ -6,6 +6,7 @@ export default createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 
 body {
@@ -14,12 +15,16 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: #333;
-  background-color: ${(props) => props.theme.colors.background};
-
   
   button {
     border: none;
     background-color: transparent;
   }
+
+
+    background: repeat center url(
+      ${(props) => props.theme.backgroundImage.src});
+    background-color: #333;
+
 }
 `
