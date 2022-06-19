@@ -1,33 +1,30 @@
-import React, { useState } from 'react'
-import { Container } from './SkillStyle'
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
+import React, { useState, useContext } from "react";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
-const SkillTypes = [
-  {
-    title: 'Front-end',
-    skills: [
-      {
-        title: 'HTML',
-        img: '',
-        alias: 'ícone do html',
-      },
-      {
-        title: 'CSS',
-        img: '',
-        alias: 'ícone do css',
-      },
-    ],
-  },
-  {
-    title: 'Back-end',
-  },
-  {
-    title: 'Design UI',
-  },
-]
+import { SkillContext } from "../SkillContext";
+import SkillTypes from "./SkillTypes";
 
-function Skills() {
-  const [activeIndex, setActiveIndex] = useState(0)
+import {
+  Container,
+  List,
+  ListItem,
+  Header,
+  ListBody,
+  PanelDescription,
+  PanelItems,
+  PanelCard,
+} from "./SkillStyle";
+////
+
+// Main component
+export default function Skills() {
+  const [activeIndex, setActiveIndex] = useState(3);
+  const { setSkillTheme } = useContext(SkillContext);
+
+  function handleIndex(index: number) {
+    index === activeIndex ? setActiveIndex(3) : setActiveIndex(index);
+  }
+
   return (
     <>
       <Container>
@@ -35,41 +32,68 @@ function Skills() {
           <span className="bodyFont">Minhas</span> habilidades.
         </h2>
         <hr />
-        <ul>
+        <List>
           {SkillTypes.map((skillType, index) => (
             <Panel
               title={skillType.title}
               key={index}
               isActive={activeIndex === index}
-              onShow={() => setActiveIndex(index)}
+              onShow={() => handleIndex(index)}
             >
-              {skillType.skills?.map((skill) => console.log(skill))}
+              <PanelDescription>{skillType.description}</PanelDescription>
+
+              <PanelItems className="PanelItems">
+                {skillType.skills?.map((skill, index) => (
+                  <PanelCards
+                    alias={skill.alias}
+                    img={"/about/" + skill.img + ".svg"}
+                    title={skill.title}
+                    key={index}
+                  />
+                ))}
+              </PanelItems>
             </Panel>
           ))}
-        </ul>
+        </List>
       </Container>
     </>
-  )
+  );
 }
 
-export default Skills
 interface PanelProps {
-  title: string
-  children?: any
-  isActive: boolean
-  onShow: () => void
+  title: string;
+  children?: any;
+  isActive: boolean;
+  onShow: () => void;
 }
+interface PanelCardsProps {
+  title: string;
+  img: string;
+  alias: string;
+}
+
 function Panel({ title, children, isActive, onShow }: PanelProps) {
   return (
-    <li className="panel">
-      <div className="panel-header" onClick={onShow}>
+    <ListItem className="panel">
+      <Header onClick={onShow} isExpanded={isActive}>
         <h3>{title}</h3>
+
         <ArrowDownwardIcon
           className="ArrowIcon"
-          sx={{ width: '42px', height: '42px' }}
+          sx={{ width: "42px", height: "42px" }}
         />
-      </div>
-      {isActive && <div>{children}</div>}
-    </li>
-  )
+      </Header>
+
+      {isActive && <ListBody>{children}</ListBody>}
+    </ListItem>
+  );
+}
+
+function PanelCards({ title, img, alias }: PanelCardsProps) {
+  return (
+    <PanelCard>
+      <img src={img} alt={alias} height={64} width={32} />
+      <h4>{title}</h4>
+    </PanelCard>
+  );
 }
