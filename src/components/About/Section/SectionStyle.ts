@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../../../styles'
+import styled from "styled-components";
+import theme from "../../../styles";
 
 export const Container = styled.section`
   display: flex;
@@ -13,22 +13,23 @@ export const Container = styled.section`
     width: 19rem;
   }
 
-  @media (max-width: ${theme.screenSize.desktop}) {
+  @media (max-width: 1150px) {
     max-width: 100vw;
     align-items: center;
     margin: 0 auto;
   }
-`
+`;
 
 interface SectionProps {
-  isExpanded: boolean
-  color: string
+  isExpanded: boolean;
+  color: string;
+  BorderColor: string;
 }
 export const Section = styled.div<SectionProps>`
   margin: 1rem 0;
   padding: 1rem;
   /* width: 100%; */
-  border: 2px solid ${(props) => props.theme.colors.text};
+  border: 2px solid ${(props) => props.BorderColor};
   border-radius: 15px;
 
   div {
@@ -60,7 +61,7 @@ export const Section = styled.div<SectionProps>`
       props.isExpanded &&
       `{
         padding-bottom: 1rem;
-        border-bottom: 2px solid ${props.color}} ;
+        border-bottom: 2px solid ${props.BorderColor}} ;
         margin-bottom: 1.5rem;
         width: 100%;
       }
@@ -83,4 +84,4 @@ export const Section = styled.div<SectionProps>`
       text-align: justify;
     }
   }
-`
+`;

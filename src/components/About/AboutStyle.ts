@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../../styles'
+import styled from "styled-components";
+import theme from "../../styles";
 
 export const Container = styled.main`
   margin-top: 4rem;
@@ -9,7 +9,7 @@ export const Container = styled.main`
   justify-content: space-between;
   align-items: start;
   gap: 5rem;
-  @media (max-width: ${theme.screenSize.desktop}) {
+  @media (max-width: 1150px) {
     flex-direction: column;
     gap: 0;
   }
@@ -43,4 +43,4 @@ export const Container = styled.main`
       display: none;
     }
   }
-`
+`;

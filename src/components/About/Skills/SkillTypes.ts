@@ -1,7 +1,8 @@
 const SkillTypes = [
   {
     title: "Front-end",
-    description: "Testeeee",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet  tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
     skills: [
       {
         title: ".JS",
@@ -27,7 +28,8 @@ const SkillTypes = [
   },
   {
     title: "Back-end",
-    description: "Testeeee",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet  tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
     skills: [
       {
         title: "MongoDB",
@@ -53,16 +55,17 @@ const SkillTypes = [
   },
   {
     title: "Design UI",
-    description: "Testeeee",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet rerum impedit est temporibus culpa sint provident aut tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
     skills: [
       {
-        title: "Figma",
-        img: "",
+        title: "Código píxel-perfect",
+        img: "pixelperfect",
         alias: "ícone do MongoDB",
       },
       {
-        title: "sla",
-        img: "",
+        title: "Figma e Illustrator",
+        img: "figma",
         alias: "ícone do PostgreSQL",
       },
     ],
