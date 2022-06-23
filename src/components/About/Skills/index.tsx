@@ -15,6 +15,7 @@ import {
   PanelDescription,
   PanelCard,
 } from "./Style";
+import CV from "./CV";
 
 ////
 type PanelProps = {
@@ -45,9 +46,7 @@ export default function Skills() {
 
   return (
     <>
-      <Container
-      color={SkillColor}
-      >
+      <Container color={SkillColor}>
         <h2>
           <span className="bodyFont">Minhas</span> habilidades.
         </h2>
@@ -79,6 +78,7 @@ export default function Skills() {
             </Panel>
           ))}
         </List>
+        <CV />
       </Container>
     </>
   );

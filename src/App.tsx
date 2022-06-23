@@ -1,29 +1,28 @@
-import * as React from 'react'
-import { useState } from 'react'
+import * as React from "react";
+import { useState } from "react";
 
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from "styled-components";
 
-import dark from '../src/styles/themes/dark'
-import light from '../src/styles/themes/light'
-import GlobalStyles from '../src/styles/global'
+import dark from "../src/styles/themes/dark";
+import light from "../src/styles/themes/light";
+import GlobalStyles from "../src/styles/global";
 
-import { Container } from './style'
-import { Header } from './components/Home/Header'
-import { Main } from './components/Home/Main'
-import { Nav } from './components/Home/Nav'
-import About from './components/About'
+import { Container } from "./style";
+import { Header } from "./components/Home/Header";
+import { Main } from "./components/Home/Main";
+import { Nav } from "./components/Home/Nav";
+import About from "./components/About";
+import Projects from "./components/Projects";
 
 export default function Home() {
-  const [theme, setTheme] = useState(dark)
+  const [theme, setTheme] = useState(dark);
 
   function toggleTheme() {
-    setTheme(theme === dark ? light : dark)
+    setTheme(theme === dark ? light : dark);
   }
 
   return (
     <>
-
-
       <ThemeProvider theme={theme}>
         <GlobalStyles />
 
@@ -34,8 +33,9 @@ export default function Home() {
             <Nav />
           </div>
           <About />
+          <Projects />
         </Container>
       </ThemeProvider>
     </>
-  )
+  );
 }

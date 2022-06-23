@@ -12,14 +12,17 @@
     "@babel/core": "^7.18.5",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@mantine/hooks": "^4.2.10",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.4",
     "classnames": "^2.3.1",
+    "framer-motion": "^6.3.11",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-is": "^18.2.0",
     "react-use": "^17.4.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "swiper": "^8.2.4"
   },
   "devDependencies": {
     "@types/node": "^17.0.38",

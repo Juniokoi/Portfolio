@@ -5,10 +5,8 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 40vw;
-  /* height: auto; */
   transition: all 0.3s ease-in-out;
-
+  width: 100%;
   hr {
     width: 19rem;
   }
@@ -37,10 +35,7 @@ export const Section = styled.div<SectionProps>`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-width: 40vw;
-    /* width: 540px; */
-    /* padding: 0 50px; */
-
+    
     h3 {
       display: inline;
       width: 100px;

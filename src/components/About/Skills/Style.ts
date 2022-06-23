@@ -21,7 +21,71 @@ export const Container = styled.section<SkillProps>`
     margin: 0 auto;
   }
   .Shadow {
-    box-shadow: 0 0px 20px 10px ${props => props.color+'50'};
+    box-shadow: 0 0px 20px 10px ${(props) => props.color + "50"};
+  }
+
+  button {
+    width: 37%;
+    min-width: 37%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.background};
+
+    font-family: ${theme.fonts.fat};
+    text-transform: capitalize;
+    font-size: 2rem;
+
+    border-radius: 10px;
+    padding: 0.5rem 0rem;
+    margin-top: 4rem;
+    margin-left: 10px;
+
+    img {
+      width: 42px;
+      height: 42px;
+      transition: 0.1s;
+    }
+
+    animation: scale-up-center 1500ms ease-out infinite;
+    @keyframes scale-up-center {
+      20% {
+        outline: 5px solid ${(props) => props.theme.colors.text + "ff"};
+      }
+      70% {
+        outline-offset: 10px;
+      }
+      75% {
+        outline: 5px solid ${(props) => props.theme.colors.text + "00"};
+      }
+    }
+
+    &:hover {
+      background-color: ${(props) => props.theme.colors.background};
+      color: ${(props) => props.theme.colors.text};
+      animation: paused;
+      outline: 5px solid ${(props) => props.theme.colors.text};
+      outline-offset: 10px;
+      box-shadow: 0 0 0 2px ${(props) => props.theme.colors.text};
+
+      img {
+        background-color: ${(props) => props.theme.colors.text};
+        padding: 2px;
+        border-radius: 25%;
+        scale: 1.2;
+      }
+    }
+
+    @media (max-width: ${theme.screenSize.desktop}) {
+      width: 50%;
+      align-items: center;
+    }
+    @media screen and (max-width: 500px) {
+      width: 90%;
+    }
   }
 `;
 
@@ -33,8 +97,7 @@ export const List = styled.ul<SkillProps>`
   border-color: ${(props) => props.color};
   border-radius: 15px;
   background-color: ${(props) => props.theme.colors.background};
-  /* box-shadow: 0 5px 10px 0 ${(props) => props.color + "90"} */
-
+  width: 90%;
 `;
 
 // Each skill is an item. ie(Frontend, Backend, Design UI)

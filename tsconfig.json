@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],  
-  "files": ["style.d.ts"],
+  "include": ["src"],
+  "files": ["style.d.ts", "./src/components/Projects/Card.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
