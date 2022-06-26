@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -14,12 +14,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { motion, AnimateSharedLayout } from "framer-motion";
+import { motion } from "framer-motion";
 import { Card } from "./Card";
+import { imageListClasses } from "@mui/material";
 
 const Carousel = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const [pause, setPause] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = (index: number) => {
     setIsOpen(!isOpen);
@@ -43,8 +43,8 @@ const Carousel = () => {
     <>
       <Swiper
         effect="coverflow"
-        slidesPerView={3}
-        spaceBetween={60}
+        slidesPerView={2}
+        spaceBetween={30}
         centeredSlides={true}
         centeredSlidesBounds={true}
         grabCursor={true}
@@ -72,19 +72,11 @@ const Carousel = () => {
           swiperElement.$el[0].getAttribute("data-swiper-slide-index");
         }}
       >
-        <AnimateSharedLayout>
-          {ProjectName.map((projectName, index) => (
-            <SwiperSlide key={index}>
-              <motion.div
-                layout
-                onClick={() => toggleOpen(index)}
-                className="Tess"
-              >
-                {projectName}
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </AnimateSharedLayout>
+        {ProjectName.map((projectName, index) => (
+          <SwiperSlide key={index} onClick={() => toggleOpen(index)}>
+            {<img src="https://source.unsplash.com/random/4" />}
+          </SwiperSlide>
+        ))}
       </Swiper>
       {isOpen && (
         <Card Id={selectedId!} onClick={() => toggleOpen(selectedId!)} />

@@ -1,4 +1,5 @@
 import React from "react";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useHotkeys } from "@mantine/hooks";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -40,15 +41,15 @@ export const Card = ({ onClick, Id }: CardProps) => {
       <AnimatePresence>
         <Blur onClick={onClick} key={123} />
         <motion.div
-          className="Carddd"
+          className="openCard"
           initial={{ y: 10 }}
           animate={{ y: 0, transition: { delay: 0.2 } }}
           layout
         >
           <motion.h5> {Item[Id].title}</motion.h5>
 
-          <motion.button onClick={() => alert("oi")}>
-            {Item[Id].link}
+          <motion.button onClick={onClick}>
+            <CloseRoundedIcon />
           </motion.button>
         </motion.div>
       </AnimatePresence>

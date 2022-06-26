@@ -51,17 +51,7 @@ export const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
-  .Tess {
-    background-color: #d2c5f9;
-    width: 100%;
-    border-radius: 25px;
-    &:hover {
-      cursor: pointer;
-    }
-
-    height: 100%;
-  }
-  .Carddd {
+  .openCard {
     position: fixed;
     left: 0;
     right: 0;
@@ -69,10 +59,21 @@ export const Container = styled.div`
     margin: 0 auto;
     padding: 40px 0;
     border-radius: 25px;
-    background-color: #ff000080;
+    background-color: ${(props) => props.theme.colors.background};
     z-index: 3;
-    width: 50%;
-    height: 50%;
+    width: 700px;
+    height: 500px;
+    button {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 4;
+      cursor: pointer;
+      svg {
+        stroke: ${(props) => props.theme.colors.text};
+        stroke-width: 4px;
+      }
+    }
   }
   .Blur {
     position: fixed;
@@ -94,13 +95,16 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
-    aspect-ratio: 16/9 !important;
+    background-color: #d2c5f9;
+    border-radius: 25px;
+
+    height: 600px;
 
     img {
       display: block;
       width: 100%;
       height: 100%;
+      border-radius: 25px;
       object-fit: cover;
     }
   }

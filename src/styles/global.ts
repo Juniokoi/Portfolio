@@ -22,7 +22,6 @@ body {
     background-color: transparent;
   }
 
-
     background: repeat center url(
       ${(props) => props.theme.backgroundImage.src});
     background-color: #333;
