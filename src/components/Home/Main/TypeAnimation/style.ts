@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../../../../src/styles'
+import styled from "styled-components";
+import theme from "../../../../styles";
 
 export const CodeBracket = styled.p`
   font-family: ${theme.fonts.code};
@@ -7,7 +7,7 @@ export const CodeBracket = styled.p`
   display: inline;
   color: ${(props) => props.theme.colors.brackets};
   font-weight: 400;
-`
+`;
 
 export const Code = styled.p`
   font-family: ${theme.fonts.code};
@@ -15,10 +15,10 @@ export const Code = styled.p`
   display: inline;
   color: ${(props) => props.theme.colors.correct};
   max-height: 100px;
-  font-weight: '700';
+  font-weight: "700";
 
   .end-cursor:after {
-    content: '|';
+    content: "|";
     color: ${(props) => props.theme.colors.text};
   }
 
@@ -32,4 +32,4 @@ export const Code = styled.p`
       opacity: 0;
     }
   }
-`
+`;

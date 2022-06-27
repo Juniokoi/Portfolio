@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Pagination,
   Navigation,
-  FreeMode,
   Autoplay,
   EffectCoverflow,
 } from "swiper";
@@ -14,7 +13,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { motion } from "framer-motion";
 import { Card } from "./Card";
 import { imageListClasses } from "@mui/material";
 
@@ -59,20 +57,19 @@ const Carousel = () => {
           modifier: 1,
           slideShadows: false,
         }}
-        freeMode={true}
         loop={true}
         pagination={paginationOptions}
         navigation={true}
-        modules={[Pagination, EffectCoverflow, FreeMode, Navigation, Autoplay]}
+        modules={[Pagination, EffectCoverflow, Navigation, Autoplay]}
         className="mySwiper"
         onClick={(swiperElement, mouseEvent) => {
           swiperElement.autoplay.running
             ? swiperElement.autoplay.stop()
             : swiperElement.autoplay.start();
-          swiperElement.$el[0].getAttribute("data-swiper-slide-index");
+          swiperElement.$el[1].getAttribute("data-swiper-slide-index");
         }}
       >
-        {ProjectName.map((projectName, index) => (
+        {ProjectName.map((item, index) => (
           <SwiperSlide key={index} onClick={() => toggleOpen(index)}>
             {<img src="https://source.unsplash.com/random/4" />}
           </SwiperSlide>
