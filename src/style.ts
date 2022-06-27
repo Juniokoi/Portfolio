@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../src/styles'
+import styled from "styled-components";
+import theme from "../src/styles";
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin: auto;
   padding: 5vh 5vw;
   max-width: 1920px;
-  background: ${(props) => props.theme.colors.background + 'aa'};
+  background: ${(props) => props.theme.colors.background + "aa"};
 
   @media (max-width: ${theme.screenSize.desktop}) {
     padding: 0 4vw;
@@ -15,7 +15,7 @@ export const Container = styled.div`
 
   .header {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 100%;
       height: 100%;
@@ -26,8 +26,8 @@ export const Container = styled.div`
       background: linear-gradient(
         to bottom,
         ${(props) => props.theme.colors.background},
-        ${(props) => props.theme.colors.background + '00'}
+        ${(props) => props.theme.colors.background + "00"}
       );
     }
   }
-`
+`;

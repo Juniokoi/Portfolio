@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Container } from './style'
+import * as React from "react";
+import { Container } from "./style";
 
 export function Nav() {
   return (
@@ -19,5 +19,5 @@ export function Nav() {
         </li>
       </ul>
     </Container>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../../../styles'
+import styled from "styled-components";
+import theme from "../../../styles";
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const Container = styled.div`
   @media (max-width: ${theme.screenSize.desktop}) {
     display: none;
   }
-`
+`;
 export const Button = styled.button`
   background-color: transparent;
   font-family: ${theme.fonts.fat};
@@ -24,4 +24,4 @@ export const Button = styled.button`
   @media (max-width: ${theme.screenSize.desktop}) {
     display: none;
   }
-`
+`;

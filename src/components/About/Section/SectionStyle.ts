@@ -35,7 +35,7 @@ export const Section = styled.div<SectionProps>`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+
     h3 {
       display: inline;
       width: 100px;

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../../../styles'
+import styled from "styled-components";
+import theme from "../../../styles";
 
 export const FatFont = styled.h2`
   font-family: ${theme.fonts.fat};
@@ -21,7 +21,7 @@ export const FatFont = styled.h2`
       width: 100%;
     }
   }
-`
+`;
 
 export const Container = styled.div`
   align-items: left;
@@ -65,7 +65,7 @@ export const Container = styled.div`
       top: 0;
     }
   }
-`
+`;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -92,4 +92,4 @@ export const Wrapper = styled.div`
       }
     }
   }
-`
+`;

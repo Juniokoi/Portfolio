@@ -2,12 +2,7 @@ import React, { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import {
-  Pagination,
-  Navigation,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper";
+import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper";
 import { PaginationOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/pagination";

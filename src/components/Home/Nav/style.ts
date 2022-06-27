@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../../../styles'
+import styled from "styled-components";
+import theme from "../../../styles";
 
 export const Container = styled.nav`
   @media (max-width: ${theme.screenSize.desktop}) {
@@ -27,4 +27,4 @@ export const Container = styled.nav`
       }
     }
   }
-`
+`;

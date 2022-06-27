@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const ThemeButton = styled.button`
- background-color: transparent;
- border: none;
- cursor: pointer;
- `
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+`;
 
-export default ThemeButton
+export default ThemeButton;
