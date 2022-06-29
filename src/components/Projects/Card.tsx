@@ -2,35 +2,33 @@ import React from "react";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useHotkeys } from "@mantine/hooks";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { CloseButton, Description } from "./style";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import ShortcutRoundedIcon from "@mui/icons-material/ShortcutRounded";
 const Item = [
   {
-    title: "Projeto Teste",
+    title: "Feedget",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque consequuntur aut iure autem!",
-    image: "https://source.unsplash.com/random",
-    link: "https://www.google.com",
+      "Este projeto foi desenvolvido com o intuito de facilitar a coleta de feedbacks dos usuários, que em vez do usuário ter que enviar um email todo específico, basta clicar no widget no canto de sua tela e já abrira um menu de itens de tópicos que deseja tratar, tudo de maneira fácil e direta.",
+    image: "Projects/CardFeedget.png",
+    github: "https://github.com/Juniokoi/Feedget",
+    website: "https://feedget-landingpage.vercel.app/",
   },
   {
-    title: "Projeto Teste2",
+    title: "Rocket Coffee",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque consequuntur aut iure autem!",
-    image: "https://source.unsplash.com/random",
-    link: "https://www.google.com",
+      "Landing page project made as a challenge to develop my JavaScript skills",
+    image: "Projects/CardRocketCoffee.png",
+    github: "https://juniokoi.github.io/RocketCoffee/",
+    website: "https://github.com/Juniokoi/RocketCoffee",
   },
   {
-    title: "Projeto Teste3",
+    title: "Tindog",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque consequuntur aut iure autem!",
-    image: "https://source.unsplash.com/random",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Projeto Teste4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda atque consequuntur aut iure autem!",
-    image: "https://source.unsplash.com/random",
-    link: "https://www.google.com",
+      "Um landing page simples para treinar minhas habilidades com Bootstrap, Gulp e SCSS",
+    image: "Projects/CardTindog.png",
+    github: "https://github.com/Juniokoi/Tindog",
+    website: "https://juniokoi.github.io/Tindog/src/index.html",
   },
 ];
 
@@ -46,11 +44,40 @@ export const Card = ({ onClick, Id }: CardProps) => {
           animate={{ y: 0, transition: { delay: 0.2 } }}
           layout
         >
-          <motion.h5> {Item[Id].title}</motion.h5>
+          <h5> {Item[Id].title}</h5>
+          <img src={Item[Id].image} alt="Teste" />
+          <Description>
+            <div className="DescriptionBox">
+              <h6>#Description</h6>
+              <p>{Item[Id].description}</p>
+            </div>
+            <div className="Buttons">
+              <a href={Item[Id].github}>
+                <button>
+                  {" "}
+                  <span>
+                    Projeto no
+                    <br /> <strong>Github</strong>
+                  </span>{" "}
+                  <GitHubIcon />
+                </button>
+              </a>
 
-          <motion.button onClick={onClick}>
+              <a href={Item[Id].website}>
+                <button>
+                  <ShortcutRoundedIcon />
+                  <span>
+                    <strong>Website</strong> <br />
+                    da Aplicação
+                  </span>{" "}
+                </button>
+              </a>
+            </div>
+          </Description>
+
+          <CloseButton onClick={onClick}>
             <CloseRoundedIcon />
-          </motion.button>
+          </CloseButton>
         </motion.div>
       </AnimatePresence>
     </div>

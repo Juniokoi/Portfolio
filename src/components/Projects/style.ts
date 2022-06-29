@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: flex-start;
   padding: 0 4rem;
   color: ${(props) => props.theme.colors.text};
-
+  margin-top: 300px;
   .Text {
     display: flex;
     flex-direction: row;
@@ -44,35 +44,60 @@ export const Container = styled.div`
     margin-top: 1rem;
     box-shadow: 0 0 16px 1px #a58bf499;
   }
-  .swiper {
-    width: 100%;
-    height: 100%;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
+  /* Style for the card when user click on it */
   .openCard {
+    --border: 6px;
+    --cardWidth: 50vw;
+    --cardHeight: 80vh;
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 25%;
-    margin: 0 auto;
-    padding: 40px 0;
-    border-radius: 25px;
-    background-color: ${(props) => props.theme.colors.background};
+    left: 50%;
+    top: 50%;
+    margin-top: calc(var(--cardHeight) / -2);
+    margin-left: calc(var(--cardWidth) / -2);
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20%;
+
     z-index: 3;
-    width: 700px;
-    height: 500px;
-    button {
+    background-color: pink;
+
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+
+    border: var(--border) solid transparent;
+    border-radius: 25px;
+
+    font-family: ${theme.fonts.body};
+    h5 {
+      font-size: 4rem;
+      width: max-content;
+    }
+
+    img {
+      height: 300px;
+      width: 508px;
+    }
+
+    &:before {
+      content: "";
       position: absolute;
-      right: 20px;
-      top: 20px;
-      z-index: 4;
-      cursor: pointer;
-      svg {
-        stroke: ${(props) => props.theme.colors.text};
-        stroke-width: 4px;
-      }
+      top: -1px;
+      bottom: 0;
+      right: -1.3px;
+      border-radius: 21px;
+      width: calc(100% + var(--border) / 2);
+      height: calc(100% + var(--border) / 2);
+      background-color: ${(props) => props.theme.colors.background};
+      z-index: -1;
+    }
+    @media (max-width: 1024px) {
+      --cardWidth: 90vw;
     }
   }
   .Blur {
@@ -82,9 +107,53 @@ export const Container = styled.div`
     width: 100vw;
     height: 100vh;
     z-index: 2;
-    background-color: #00000080;
+    background-color: #000000b0;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px) t;
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .bullet-point {
+    --topMarginDistance: 90px;
+    position: relative;
+    top: var(--topMarginDistance);
+
+    width: auto;
+    height: auto;
+
+    padding: 10px 1rem;
+    margin: 0.5rem;
+
+    font-size: 1rem !important;
+    font-family: ${theme.fonts.body};
+    font-weight: 600;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+
+    color: #000;
+    box-shadow: 0 4px 8px 0 #00000088;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #000;
+    background: #d2c5f9;
+    box-shadow: 0 8px 12px 0 #00000060;
+    position: relative !important;
+    font-weight: 900px !important;
+    top: calc(var(--topMarginDistance) - 16px);
+  }
+  overflow-x: hidden !important;
+
+  /** Carousel styles */
+  .swiper {
+    width: 100%;
+    height: 120%;
+    margin: 150px auto;
+    overflow: visible !important;
+    overflow-y: visible;
   }
   .swiper-slide {
     text-align: center;
@@ -98,32 +167,94 @@ export const Container = styled.div`
     background-color: #d2c5f9;
     border-radius: 25px;
 
-    height: 600px;
+    height: 400px;
+  }
+`;
+export const MainCard = styled.img<imgProps>`
+  width: auto;
+  height: 101%;
+  border-radius: 25px;
+  box-shadow: 0 8px 60px 4px ${(props) => props.color + "50"};
+  /* border: 2px solid ${(props) => props.color}; */
+`;
 
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border-radius: 25px;
-      object-fit: cover;
+type imgProps = {
+  color: string;
+};
+
+export const CloseButton = styled.button`
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  svg {
+    stroke: ${(props) => props.theme.colors.text};
+    stroke-width: 4px;
+  }
+`;
+
+export const Description = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+
+  .DescriptionBox {
+    align-self: flex-start;
+    margin: 0 1rem;
+    width: 300px;
+    padding: 1rem;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 0px 8px rgba(84, 199, 244, 0.25),
+      0px -2px 8px rgba(241, 245, 126, 0.25),
+      0px 4px 8px rgba(151, 71, 255, 0.25),
+      -2px 0px 8px rgba(255, 121, 198, 0.25);
+
+    h6 {
+      filter: opacity(0.7);
+      font-style: italic;
     }
   }
-  .bullet-point {
-    width: auto !important;
-    height: auto !important;
-    padding: 10px 1rem !important;
-    text-align: center;
-    line-height: 20px !important;
-    font-size: 12px !important;
-    color: #000 !important;
-    border-radius: 2px !important;
-    background: rgba(255, 255, 255, 1);
-    cursor: pointer;
-  }
 
-  .swiper-pagination-bullet-active {
-    color: #000 !important;
-    background: #d2c5f9;
-    border-radius: 50% !important;
+  .Buttons {
+    --borderColor: rgba(165, 139, 244, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      color: ${(props) => props.theme.colors.text};
+      border-radius: 10px;
+      width: 200px;
+      height: 75px;
+      justify-self: stretch;
+      box-shadow: 0px 4px 4px var(--borderColor), 0 -1px 0 0 var(--borderColor);
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      text-align: start;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      font-size: 1rem;
+      strong {
+        font-size: 2rem;
+      }
+      svg {
+        width: 42px;
+        height: 42px;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
   }
 `;

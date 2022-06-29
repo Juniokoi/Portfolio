@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper";
+
 import { PaginationOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Card } from "./Card";
-import { imageListClasses } from "@mui/material";
+import { MainCard } from "./style";
 
 const Carousel = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -21,14 +20,18 @@ const Carousel = () => {
 
   const [bulletPointClass, ProjectName] = [
     "bullet-point",
-    ["Projeto Teste", "nhoim", "yay", "fffff"],
+    [
+      ["Feedget", "Projects/Feedget.png", "#8257E6"],
+      ["Rocket Coffee", "Projects/RocketCoffee.png", "#042D71"],
+      ["Tindog", "Projects/Tindog.png", "#F7E6EE"],
+    ],
   ];
 
   const paginationOptions = {
     clickable: true,
     bulletClass: bulletPointClass,
-    renderBullet: function (index, className) {
-      return `<span class="${className}"> ${ProjectName[index]} </span>`;
+    renderBullet: function(index, className) {
+      return `<span class="${className}"> ${ProjectName[index][0]} </span>`;
     },
   } as PaginationOptions;
 
@@ -36,8 +39,8 @@ const Carousel = () => {
     <>
       <Swiper
         effect="coverflow"
-        slidesPerView={2}
-        spaceBetween={30}
+        slidesPerView={3}
+        spaceBetween={240}
         centeredSlides={true}
         centeredSlidesBounds={true}
         grabCursor={true}
@@ -47,8 +50,8 @@ const Carousel = () => {
         }}
         coverflowEffect={{
           rotate: 20,
-          stretch: 0,
-          depth: 100,
+          stretch: 10,
+          depth: 0,
           modifier: 1,
           slideShadows: false,
         }}
@@ -57,16 +60,10 @@ const Carousel = () => {
         navigation={true}
         modules={[Pagination, EffectCoverflow, Navigation, Autoplay]}
         className="mySwiper"
-        onClick={(swiperElement, mouseEvent) => {
-          swiperElement.autoplay.running
-            ? swiperElement.autoplay.stop()
-            : swiperElement.autoplay.start();
-          swiperElement.$el[1].getAttribute("data-swiper-slide-index");
-        }}
       >
-        {ProjectName.map((item, index) => (
+        {ProjectName.map(([title, imgSrc, borderColor], index) => (
           <SwiperSlide key={index} onClick={() => toggleOpen(index)}>
-            {<img src="https://source.unsplash.com/random/4" />}
+            {<MainCard color={borderColor} src={imgSrc} />}
           </SwiperSlide>
         ))}
       </Swiper>

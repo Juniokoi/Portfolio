@@ -7,12 +7,15 @@ export const Container = styled.div`
   margin: auto;
   padding: 5vh 5vw;
   max-width: 1920px;
+
+
+
   background: ${(props) => props.theme.colors.background + "aa"};
 
   @media (max-width: ${theme.screenSize.desktop}) {
     padding: 0 4vw;
   }
-
+  
   .header {
     &::before {
       content: "";
