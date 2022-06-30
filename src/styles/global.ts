@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
 *,
 *::before,
@@ -6,9 +6,9 @@ export default createGlobalStyle`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-transition:all .3s ease-out;
-  transition:all .3s ease-out;
-  -moz-transition: all .3s ease-out;
+  -webkit-transition:all .15s ease-out;
+  transition:all .15s ease-out;
+  -moz-transition: all .15s ease-out;
 }
 
 body {
@@ -27,4 +27,4 @@ body {
     background-color: #333;
 
 }
-`
+`;

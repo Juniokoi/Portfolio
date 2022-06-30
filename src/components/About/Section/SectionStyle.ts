@@ -18,11 +18,6 @@ export const Container = styled.section`
   }
 `;
 
-interface SectionProps {
-  isExpanded: boolean;
-  color: string;
-  BorderColor: string;
-}
 export const Section = styled.div<SectionProps>`
   margin: 1rem 0;
   padding: 1rem;
@@ -42,25 +37,6 @@ export const Section = styled.div<SectionProps>`
       font-family: ${theme.fonts.body};
       font-size: 1.5rem;
     }
-    .ArrowIcon {
-      transition: all 0.3s ease-in-out !important;
-      transition-delay: 1s;
-      ${(props) =>
-        props.isExpanded
-          ? `transform: rotate(0deg)`
-          : `transform: rotate(-45deg)`}
-    }
-
-    /* Snipped below is only active when user clicks on expand ↕ */
-    ${(props) =>
-      props.isExpanded &&
-      `{
-        padding-bottom: 1rem;
-        border-bottom: 2px solid ${props.BorderColor}} ;
-        margin-bottom: 1.5rem;
-        width: 100%;
-      }
-        `}
   } // end of div
 
   p {
@@ -80,3 +56,8 @@ export const Section = styled.div<SectionProps>`
     }
   }
 `;
+
+interface SectionProps {
+  color: string;
+  BorderColor: string;
+}

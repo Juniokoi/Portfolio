@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
+import { CVButton } from "./Style";
 
 function CV() {
   const { title } = useContext(ThemeContext);
@@ -16,10 +17,12 @@ function CV() {
 
   return (
     <>
-      <Button variant="contained">
-        <img src={img} />
-        Baixar CV
-      </Button>
+      <CVButton>
+        <Button variant="contained">
+          <img src={img} />
+          Baixar CV
+        </Button>
+      </CVButton>
     </>
   );
 }

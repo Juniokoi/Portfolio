@@ -4,13 +4,15 @@ import theme from "../../../styles";
 type SkillProps = {
   isExpanded?: boolean;
   color?: string;
+  itemColor?: string;
+  backgroundColor?: string;
+  isDark?: boolean;
 };
 // Defines the major structure of this component
 export const Container = styled.section<SkillProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
-
   hr {
     width: 33rem;
     top: -0.5rem !important;
@@ -20,72 +22,22 @@ export const Container = styled.section<SkillProps>`
     max-width: 100vw;
     margin: 0 auto;
   }
-  .Shadow {
+  .Glow {
     box-shadow: 0 0px 20px 10px ${(props) => props.color + "50"};
+    ${(props) =>
+      props.isDark
+        ? ` color: ${props.theme.colors.background};`
+        : ` color: ${props.theme.colors.text} ;  `}
   }
-
-  button {
-    width: 37%;
-    min-width: 37%;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    background-color: ${(props) => props.theme.colors.text};
-    color: ${(props) => props.theme.colors.background};
-
-    font-family: ${theme.fonts.fat};
-    text-transform: capitalize;
-    font-size: 2rem;
-
-    border-radius: 10px;
-    padding: 0.5rem 0rem;
-    margin-top: 4rem;
-    margin-left: 10px;
-
-    img {
-      width: 42px;
-      height: 42px;
-      transition: 0.1s;
-    }
-
-    animation: scale-up-center 1500ms ease-out infinite;
-    @keyframes scale-up-center {
-      20% {
-        outline: 5px solid ${(props) => props.theme.colors.text + "ff"};
-      }
-      70% {
-        outline-offset: 10px;
-      }
-      75% {
-        outline: 5px solid ${(props) => props.theme.colors.text + "00"};
-      }
-    }
-
-    &:hover {
-      background-color: ${(props) => props.theme.colors.background};
-      color: ${(props) => props.theme.colors.text};
-      animation: paused;
-      outline: 5px solid ${(props) => props.theme.colors.text};
-      outline-offset: 10px;
-      box-shadow: 0 0 0 2px ${(props) => props.theme.colors.text};
-
-      img {
-        background-color: ${(props) => props.theme.colors.text};
-        padding: 2px;
-        border-radius: 25%;
-        scale: 1.2;
-      }
-    }
-
-    @media (max-width: ${theme.screenSize.desktop}) {
-      width: 50%;
-      align-items: center;
-    }
-    @media screen and (max-width: 500px) {
-      width: 90%;
-    }
+  .baseBgColor {
+    background-color: ${(props) => props.theme.colors.background};
+  }
+  .insideBorder,
+  .insideBorder * {
+    ${(props) =>
+      props.isDark
+        ? ` border-color: ${props.theme.colors.background} !important;`
+        : ` border-color: ${props.theme.colors.text} !important;`}
   }
 `;
 
@@ -96,22 +48,40 @@ export const List = styled.ul<SkillProps>`
   border-width: 2px 1px;
   border-color: ${(props) => props.color};
   border-radius: 15px;
-  background-color: ${(props) => props.theme.colors.background};
   width: 90%;
 `;
 
 // Each skill is an item. ie(Frontend, Backend, Design UI)
 export const ListItem = styled.li<SkillProps>`
+  transition: none !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: ${(props) => props.backgroundColor};
+
   padding: 1rem;
-  font-family: ${theme.fonts.fat};
+  font-family: ${theme.fonts.body};
   font-size: 1.5rem;
 
+  &:first-child {
+    border-radius: 14px 14px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 14px 14px;
+  }
+
+  &:hover {
+    background-color: ${(props) => props.itemColor};
+    ${(props) =>
+      props.isDark
+        ? `color: ${props.theme.colors.background} ;`
+        : ` color: ${props.theme.colors.text} ;  `}
+  }
+
   &:not(:last-child) {
-    border-bottom: 1px solid ${(props) => props.color};
+    border-bottom: 2px solid;
+    border-color: ${(props) => props.theme.colors.text};
   }
 `;
 
@@ -119,6 +89,8 @@ export const ListItem = styled.li<SkillProps>`
 export const Header = styled.div<SkillProps>`
   display: flex;
   flex-direction: row;
+  font-weight: bolder;
+
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -126,8 +98,8 @@ export const Header = styled.div<SkillProps>`
   user-select: none;
 
   .ArrowIcon {
-    transition: all 0.3s ease-in-out !important;
-    transition-delay: 1s;
+    transition: transform 0.3s ease-in-out !important;
+    /* transition-delay: 1s; */
     ${(props) =>
       props.isExpanded
         ? `transform: rotate(0deg) !important;`
@@ -197,14 +169,13 @@ export const PanelCard = styled.div<SkillProps>`
   border: 1px solid ${(props) => props.theme.colors.text};
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
   background-color: ${(props) => props.color};
-  transition: 0 !important;
   cursor: pointer;
 
   &:hover {
     img {
       filter: grayscale(0%);
     }
-    transition: all 0.15s ease !important;
+    transition: transform 0.15s ease !important;
     transform: translate(0, -0.5rem);
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
   }
@@ -223,6 +194,72 @@ export const PanelCard = styled.div<SkillProps>`
     filter: grayscale(0);
     @media (max-width: 550px) {
       width: 70%;
+    }
+  }
+`;
+
+export const CVButton = styled.div`
+  button {
+    width: 37%;
+    min-width: 37%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.background};
+
+    font-family: ${theme.fonts.fat};
+    text-transform: capitalize;
+    font-size: 2rem;
+
+    border-radius: 10px;
+    padding: 0.5rem 0rem;
+    margin-top: 4rem;
+    margin-left: 10px;
+
+    img {
+      width: 42px;
+      height: 42px;
+      transition: 0.1s;
+    }
+
+    animation: scale-up-center 1500ms ease-out infinite;
+    @keyframes scale-up-center {
+      20% {
+        outline: 5px solid ${(props) => props.theme.colors.text + "ff"};
+      }
+      70% {
+        outline-offset: 10px;
+      }
+      75% {
+        outline: 5px solid ${(props) => props.theme.colors.text + "00"};
+      }
+    }
+
+    &:hover {
+      background-color: ${(props) => props.theme.colors.background};
+      color: ${(props) => props.theme.colors.text};
+      animation: paused;
+      outline: 5px solid ${(props) => props.theme.colors.text};
+      outline-offset: 10px;
+      box-shadow: 0 0 0 2px ${(props) => props.theme.colors.text};
+
+      img {
+        background-color: ${(props) => props.theme.colors.text};
+        padding: 2px;
+        border-radius: 25%;
+        scale: 1.2;
+      }
+    }
+
+    @media (max-width: ${theme.screenSize.desktop}) {
+      width: 50%;
+      align-items: center;
+    }
+    @media screen and (max-width: 500px) {
+      width: 90%;
     }
   }
 `;

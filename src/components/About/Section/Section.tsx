@@ -1,17 +1,10 @@
 import * as React from "react";
 import { Container, Section } from "./SectionStyle";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { ThemeContext } from "styled-components";
 import { SkillContext } from "../SkillContext";
 
 export default function AboutSection() {
-  const [isOpen, setIsOpen] = React.useState(true);
-  const { SkillColor } = React.useContext(SkillContext);
-  function SpreadText() {
-    return setTimeout(() => {
-      setIsOpen(!isOpen);
-    }, 150);
-  }
+  const { TextColor } = React.useContext(SkillContext);
 
   const { colors } = React.useContext(ThemeContext);
   return (
@@ -20,19 +13,8 @@ export default function AboutSection() {
         Sobre <span className="bodyFont">mim</span>.
       </h2>
       <hr />
-      <Section isExpanded={isOpen} color={colors.text} BorderColor={SkillColor}>
-        <div onClick={() => SpreadText()}>
-          <h3>{isOpen ? "Diminuir" : "Expandir"}</h3>
-
-          <ArrowDownwardIcon
-            className="ArrowIcon"
-            sx={{
-              transform: "45deg",
-              fill: colors.text,
-            }}
-          />
-        </div>
-        {isOpen && <AboutText />}
+      <Section color={colors.text} BorderColor={TextColor}>
+        <AboutText />
       </Section>
     </Container>
   );

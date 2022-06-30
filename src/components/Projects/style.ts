@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import styled from "styled-components";
 import theme from "../../styles";
 
@@ -200,6 +201,14 @@ export const Description = styled.div`
   align-items: center;
   margin: 1rem;
 
+  a {
+    text-decoration: none;
+    --borderColor: rgba(165, 139, 244, 0.25);
+    &:nth-child(even) {
+      --borderColor: rgba(255, 121, 198, 0.25);
+    }
+  }
+
   .DescriptionBox {
     align-self: flex-start;
     margin: 0 1rem;
@@ -217,39 +226,42 @@ export const Description = styled.div`
       font-style: italic;
     }
   }
-
   .Buttons {
-    --borderColor: rgba(165, 139, 244, 0.25);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    a {
-      text-decoration: none;
-    }
 
     button {
       color: ${(props) => props.theme.colors.text};
-      border-radius: 10px;
+
       width: 200px;
       height: 75px;
-      justify-self: stretch;
-      box-shadow: 0px 4px 4px var(--borderColor), 0 -1px 0 0 var(--borderColor);
-      cursor: pointer;
+
       display: flex;
       flex-direction: row;
-      text-align: start;
       align-items: center;
+      justify-self: stretch;
       justify-content: space-between;
+
       padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0px 4px 4px var(--borderColor), 0 -1px 0 0 var(--borderColor);
+
       font-size: 1rem;
+      text-align: start;
+
+      cursor: pointer;
+
       strong {
         font-size: 2rem;
       }
+
       svg {
         width: 42px;
         height: 42px;
+        order: 2;
       }
 
       &:hover {

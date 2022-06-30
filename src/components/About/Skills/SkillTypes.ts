@@ -1,6 +1,7 @@
 const SkillTypes = [
   {
     title: "Front-end",
+    itemColor: "#d2c5f9",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet  tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
     skills: [
@@ -28,6 +29,8 @@ const SkillTypes = [
   },
   {
     title: "Back-end",
+    itemColor: "#ffb6b6",
+
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet  tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
     skills: [
@@ -55,6 +58,7 @@ const SkillTypes = [
   },
   {
     title: "Design UI",
+    itemColor: "#f8fabe",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet rerum impedit est temporibus culpa sint provident aut tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
     skills: [

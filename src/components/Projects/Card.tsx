@@ -52,7 +52,7 @@ export const Card = ({ onClick, Id }: CardProps) => {
               <p>{Item[Id].description}</p>
             </div>
             <div className="Buttons">
-              <a href={Item[Id].github}>
+              <a href={Item[Id].github} target="blank">
                 <button>
                   {" "}
                   <span>
@@ -63,8 +63,8 @@ export const Card = ({ onClick, Id }: CardProps) => {
                 </button>
               </a>
 
-              <a href={Item[Id].website}>
-                <button>
+              <a href={Item[Id].website} target="blank">
+                <button >
                   <ShortcutRoundedIcon />
                   <span>
                     <strong>Website</strong> <br />
