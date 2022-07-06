@@ -14,6 +14,9 @@ export const Container = styled.div`
   }
 `;
 export const Button = styled.button`
+  a {
+    text-decoration: none;
+  }
   background-color: transparent;
   font-family: ${theme.fonts.fat};
   font-size: 1.5rem;

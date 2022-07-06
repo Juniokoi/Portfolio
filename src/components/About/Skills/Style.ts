@@ -199,10 +199,12 @@ export const PanelCard = styled.div<SkillProps>`
 `;
 
 export const CVButton = styled.div`
+  a {
+    text-decoration: none;
+  }
   button {
     width: 37%;
     min-width: 37%;
-
     display: flex;
     justify-content: space-evenly;
     align-items: center;

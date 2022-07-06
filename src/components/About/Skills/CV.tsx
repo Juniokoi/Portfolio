@@ -5,23 +5,28 @@ import { CVButton } from "./Style";
 
 function CV() {
   const { title } = useContext(ThemeContext);
-  let img: string;
+  let icon: string;
 
   (() => {
     if (title === "dark") {
-      img = "/icons/darkDownload.svg";
+      icon = "/icons/darkDownload.svg";
     } else {
-      img = "/icons/whiteDownload.svg";
+      icon = "/icons/whiteDownload.svg";
     }
   })();
 
   return (
     <>
       <CVButton>
-        <Button variant="contained">
-          <img src={img} />
-          Baixar CV
-        </Button>
+        <a
+          href="https://drive.google.com/file/d/1DhOHY6VsQOyaYv70FFsIse0re_lNwcTD/view"
+          target="_blank"
+        >
+          <Button variant="contained">
+            <img src={icon} alt="Icon para baixar" />
+            Baixar CV
+          </Button>
+        </a>
       </CVButton>
     </>
   );

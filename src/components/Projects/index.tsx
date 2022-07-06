@@ -7,7 +7,7 @@ import DashboardRoundedIcon from "@mui/icons-material/Dashboard";
 
 export default function Projects() {
   return (
-    <Container>
+    <Container id="projects">
       <div className="Text">
         <div className="Header">
           <DashboardRoundedIcon />

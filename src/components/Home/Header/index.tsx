@@ -8,8 +8,10 @@ interface Props {
 }
 export function Header({ toggleTheme }: Props) {
   return (
-    <Container>
-      <Button>minhas redes</Button>
+    <Container id="home">
+      <a href="https://linktr.ee/juniokoi" target="_blank">
+        <Button>minhas redes</Button>
+      </a>
       <ThemeSwitcher toggleTheme={toggleTheme} />
     </Container>
   );

@@ -7,7 +7,7 @@ import { Container } from "./AboutStyle";
 export default function About() {
   return (
     <>
-      <Container>
+      <Container id="about">
         <SkillContextProvider>
           <Section />
           <Skills />
