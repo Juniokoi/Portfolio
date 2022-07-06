@@ -14,7 +14,7 @@ export const Container = styled.nav`
     justify-content: space-between;
     padding: 0 5rem;
 
-    margin-top: 10rem;
+    margin-top: 4rem;
     margin-bottom: 8rem;
 
     font-family: ${theme.fonts.fat};

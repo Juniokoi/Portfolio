@@ -3,7 +3,7 @@ import theme from "../../styles";
 
 export const Container = styled.main`
   padding-top: 8rem;
-
+  height: 800px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,6 +12,7 @@ export const Container = styled.main`
   @media (max-width: 1150px) {
     flex-direction: column;
     gap: 0;
+    height: 1300px;
   }
   .ArrowIcon {
     transform: rotate(-45deg);
