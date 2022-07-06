@@ -1,13 +1,41 @@
+import * as React from "react";
+import { useState } from "react";
 
+import { ThemeProvider } from "styled-components";
 
-function App() {
+import dark from "../src/styles/themes/dark";
+import light from "../src/styles/themes/light";
+import GlobalStyles from "../src/styles/global";
+
+import { Container } from "./style";
+import { Header } from "./components/Home/Header";
+import { Main } from "./components/Home/Main";
+import { Nav } from "./components/Home/Nav";
+import About from "./components/About";
+import Projects from "./components/Projects";
+
+export default function Home() {
+  const [theme, setTheme] = useState(dark);
+
+  function toggleTheme() {
+    setTheme(theme === dark ? light : dark);
+  }
 
   return (
-    <div className='bg-zinc-800 text-gray-200 h-[100vh] w-[100vw] flex flex-col items-center justify-center'>
-      <h1 className='mx-auto  font-bold text-xl'>Site em desenvolvimento! </h1>
-      <p>Um website incrível está por vir! </p>
-    </div>
-  )
-}
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
 
-export default App
+        <Container>
+          <div className="header">
+            <Header toggleTheme={toggleTheme} />
+            <Main />
+            <Nav />
+          </div>
+          <About />
+          <Projects />
+        </Container>
+      </ThemeProvider>
+    </>
+  );
+}
