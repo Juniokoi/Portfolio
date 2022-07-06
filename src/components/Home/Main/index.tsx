@@ -1,27 +1,27 @@
-import React from 'react'
-import { useContext } from 'react'
-import { ThemeContext } from 'styled-components'
-import { FatFont, Container, Wrapper } from './style'
-import TypeAnimation from './TypeAnimation'
+import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "styled-components";
+import { FatFont, Container, Wrapper } from "./style";
+import TypeAnimation from "./TypeAnimation";
 
-let star: string, wavy: string, profile: string
+let star: string, wavy: string, profile: string;
 
 function changeImages(theme: string) {
-  if (theme === 'dark') {
-    star = '/icons/whiteStar.svg'
-    wavy = '/icons/whiteWavy.svg'
-    profile = '/images/profileDark.png'
+  if (theme === "dark") {
+    star = "/icons/whiteStar.svg";
+    wavy = "/icons/whiteWavy.svg";
+    profile = "/images/profileDark.png";
   } else {
-    star = '/icons/darkStar.svg'
-    wavy = '/icons/darkWavy.svg'
-    profile = '/images/profile.png'
+    star = "/icons/darkStar.svg";
+    wavy = "/icons/darkWavy.svg";
+    profile = "/images/profile.png";
   }
 }
 
 export function Main() {
-  const { title } = useContext(ThemeContext)
+  const { title } = useContext(ThemeContext);
 
-  changeImages(title)
+  changeImages(title);
 
   return (
     <Wrapper>
@@ -39,8 +39,9 @@ export function Main() {
         </FatFont>
 
         <img className="lastStar" src={star} alt="Star Icon" />
-
-        {/* <TypeAnimation /> */}
+        <div className="typing">
+          <TypeAnimation />
+        </div>
       </Container>
       <img
         className="profile"
@@ -48,5 +49,5 @@ export function Main() {
         alt="Uma foto de perfil do Junio Koi"
       />
     </Wrapper>
-  )
+  );
 }

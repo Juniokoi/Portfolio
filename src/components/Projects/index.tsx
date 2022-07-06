@@ -18,9 +18,8 @@ export default function Projects() {
         </div>
         <div className="Body">
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda
-            atque consequuntur aut iure autem! Quidem obcaecati natus laborum
-            molestias voluptas hic harum, quia officiis!
+            Meus principais projetos desenvolvidos para me desafiar criando
+            soluções com linguagens e/ou ferramentas que estou aprendendo.
           </p>
         </div>
       </div>

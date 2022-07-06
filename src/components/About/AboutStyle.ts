@@ -2,7 +2,7 @@ import styled from "styled-components";
 import theme from "../../styles";
 
 export const Container = styled.main`
-  margin-top: 4rem;
+  padding-top: 8rem;
 
   display: flex;
   flex-direction: row;

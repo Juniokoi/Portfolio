@@ -3,7 +3,7 @@ const SkillTypes = [
     title: "Front-end",
     itemColor: "#d2c5f9",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet  tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
+      "De simples HTML até JSX, utilizo estas ferramentas para criar soluções que aliam design, acessibilidade e responsividade",
     skills: [
       {
         title: ".JS",
@@ -32,7 +32,7 @@ const SkillTypes = [
     itemColor: "#ffb6b6",
 
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet  tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
+      "Nada de vale uma boa interface se os dados dos usuários não podem ser armazenados de maneira eficiente, ética e segura.",
     skills: [
       {
         title: "MongoDB",
@@ -60,17 +60,17 @@ const SkillTypes = [
     title: "Design UI",
     itemColor: "#f8fabe",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem iusto eveniet rerum impedit est temporibus culpa sint provident aut tenetur quis ipsam illum amet quibusdam necessitatibus repudiandae. Tempora, praesentium",
+      "Códigos e um belo design é a melhor combinação que há! Ainda mais quando se utiliza as ferramentas e métodos certos para explorar ainda mais esse campo.",
     skills: [
       {
         title: "Código píxel-perfect",
         img: "pixelperfect",
-        alias: "ícone do MongoDB",
+        alias: "Imagem de um esquadro com um lápis ao lado",
       },
       {
         title: "Figma e Illustrator",
         img: "figma",
-        alias: "ícone do PostgreSQL",
+        alias: "Imagem de um quadrado com a letra A dentro",
       },
     ],
   },

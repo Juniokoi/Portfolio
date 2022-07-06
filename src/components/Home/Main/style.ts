@@ -49,12 +49,19 @@ export const Container = styled.div`
       height: auto;
     }
   }
-
+  .typing {
+    margin: 4rem 0;
+    height: 200px;
+    text-align: center;
+    width: 100%;
+  }
   @media (max-width: ${theme.screenSize.desktop}) {
     justify-content: center;
     align-items: center;
     max-width: 297px;
-
+    .typing {
+      margin: 0 auto;
+    }
     .firstStar {
       left: -1rem;
       top: 2rem;
@@ -73,7 +80,10 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   margin-top: 50px;
   padding: 0 5rem;
-
+  .profile {
+    width: auto;
+    height: 100%;
+  }
   @media (max-width: ${theme.screenSize.desktop}) {
     flex-direction: column;
     align-items: center;

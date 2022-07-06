@@ -125,7 +125,7 @@ export const ListBody = styled.div`
 export const PanelDescription = styled.div`
   width: 50%;
   text-align: start;
-  align-self: flex-end;
+  align-self: center;
   font-family: ${theme.fonts.body};
   font-size: 1.5rem;
   height: 100%;
