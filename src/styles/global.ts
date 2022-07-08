@@ -17,6 +17,7 @@ body {
   font-weight: 400;
   color: #333;
 
+  margin: 0 auto;
   button {
     border: none;
     background-color: transparent;

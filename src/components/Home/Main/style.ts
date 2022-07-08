@@ -26,6 +26,7 @@ export const FatFont = styled.h2`
 export const Container = styled.div`
   align-items: left;
   justify-content: end;
+  margin: 0 8rem;
 
   .firstStar {
     position: relative;

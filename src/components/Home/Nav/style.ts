@@ -2,6 +2,8 @@ import styled from "styled-components";
 import theme from "../../../styles";
 
 export const Container = styled.nav`
+  padding: 0 5rem;
+
   @media (max-width: ${theme.screenSize.desktop}) {
     ul,
     li {

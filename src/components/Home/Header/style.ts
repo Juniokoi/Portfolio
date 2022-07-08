@@ -3,9 +3,10 @@ import theme from "../../../styles";
 
 export const Container = styled.div`
   display: flex;
+  margin: 5rem 6rem 0px 10rem;
+
   justify-content: space-between;
   align-items: center;
-  padding: 0 5rem;
   height: 60px;
   /* background-color: ${(props) => props.theme.colors.background}; */
   color: ${(props) => props.theme.colors.text};

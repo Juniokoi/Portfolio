@@ -1,20 +1,21 @@
-import 'styled-components'
+import "styled-components";
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
-    title: string
+    title: string;
 
     colors: {
-      background: string
-      text: string
+      background: string;
+      text: string;
 
-      error: string
-      correct: string
-      brackets: string
-    }
+      error: string;
+      correct: string;
+      brackets: string;
+    };
 
     backgroundImage: {
-      src: string
-    }
+      src: string;
+      footer: string;
+    };
   }
 }

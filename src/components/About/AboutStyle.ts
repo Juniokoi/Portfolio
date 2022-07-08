@@ -2,12 +2,13 @@ import styled from "styled-components";
 import theme from "../../styles";
 
 export const Container = styled.main`
-  padding-top: 8rem;
+  padding: 8rem 5rem;
   height: 800px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
+  margin-bottom: 220px;
   gap: 5rem;
   @media (max-width: 1150px) {
     flex-direction: column;

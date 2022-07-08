@@ -5,17 +5,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 5vh 5vw;
   max-width: 1920px;
-
-
-
+  overflow-x: hidden;
   background: ${(props) => props.theme.colors.background + "aa"};
 
-  @media (max-width: ${theme.screenSize.desktop}) {
+  /* @media (max-width: ${theme.screenSize.desktop}) {
     padding: 0 4vw;
-  }
-  
+  } */
+
   .header {
     &::before {
       content: "";

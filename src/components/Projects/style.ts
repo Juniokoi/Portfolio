@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import styled from "styled-components";
 import theme from "../../styles";
 
@@ -6,13 +5,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 4rem;
+  padding: 0rem 4rem;
+  padding-top: 8rem;
   color: ${(props) => props.theme.colors.text};
-  margin-top: 300px;
+  background-color: ${(props) => props.theme.colors.background};
   .Text {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
   }
   .Header {
     display: flex;
@@ -31,10 +31,12 @@ export const Container = styled.div`
     }
   }
   .Body {
+    align-self: flex-end;
     p {
       text-align: start;
-      width: 80%;
+      width: 50%;
       font-size: 1.5rem;
+      align-self: flex-end;
       font-family: ${theme.fonts.body};
     }
   }
@@ -42,7 +44,7 @@ export const Container = styled.div`
     width: 100%;
     height: 4px;
     border: 1px solid #a58bf499;
-    margin-top: 1rem;
+    margin-top: 2rem;
     box-shadow: 0 0 16px 1px #a58bf499;
   }
 
