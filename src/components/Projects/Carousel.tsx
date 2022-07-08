@@ -21,16 +21,16 @@ const Carousel = () => {
   const [bulletPointClass, ProjectName] = [
     "bullet-point",
     [
-      ["Feedget", "Projects/Feedget.png", "#8257E6"],
-      ["Rocket Coffee", "Projects/RocketCoffee.png", "#042D71"],
-      ["Tindog", "Projects/Tindog.png", "#F7E6EE"],
+      ["Feedget", "Projects/Feedget.webp", "#8257E6"],
+      ["Rocket Coffee", "Projects/RocketCoffee.webp", "#042D71"],
+      ["Tindog", "Projects/Tindog.webp", "#F7E6EE"],
     ],
   ];
 
   const paginationOptions = {
     clickable: true,
     bulletClass: bulletPointClass,
-    renderBullet: function(index, className) {
+    renderBullet: function (index, className) {
       return `<span class="${className}"> ${ProjectName[index][0]} </span>`;
     },
   } as PaginationOptions;

@@ -9,7 +9,7 @@ export default {
     brackets: "#1E66F5",
   },
   backgroundImage: {
-    src: "/assets/WhiteBackground.png",
-    footer: "/assets/WhiteOil.png",
+    src: "/assets/WhiteBackground.webp",
+    footer: "/assets/WhiteOil.webp",
   },
 };

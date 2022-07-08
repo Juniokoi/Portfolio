@@ -10,7 +10,7 @@ const Item = [
     title: "Feedget",
     description:
       "Este projeto foi desenvolvido com o intuito de facilitar a coleta de feedbacks dos usuários, que em vez do usuário ter que enviar um email todo específico, basta clicar no widget no canto de sua tela e já abrira um menu de itens de tópicos que deseja tratar, tudo de maneira fácil e direta.",
-    image: "Projects/CardFeedget.png",
+    image: "Projects/CardFeedget.webp",
     github: "https://github.com/Juniokoi/Feedget",
     website: "https://feedget-landingpage.vercel.app/",
   },
@@ -18,7 +18,7 @@ const Item = [
     title: "Rocket Coffee",
     description:
       "Landing page project made as a challenge to develop my JavaScript skills",
-    image: "Projects/CardRocketCoffee.png",
+    image: "Projects/CardRocketCoffee.webp",
     github: "https://juniokoi.github.io/RocketCoffee/",
     website: "https://github.com/Juniokoi/RocketCoffee",
   },
@@ -26,7 +26,7 @@ const Item = [
     title: "Tindog",
     description:
       "Um landing page simples para treinar minhas habilidades com Bootstrap, Gulp e SCSS",
-    image: "Projects/CardTindog.png",
+    image: "Projects/CardTindog.webp",
     github: "https://github.com/Juniokoi/Tindog",
     website: "https://juniokoi.github.io/Tindog/src/index.html",
   },
@@ -64,7 +64,7 @@ export const Card = ({ onClick, Id }: CardProps) => {
               </a>
 
               <a href={Item[Id].website} target="blank">
-                <button >
+                <button>
                   <ShortcutRoundedIcon />
                   <span>
                     <strong>Website</strong> <br />

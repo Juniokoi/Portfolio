@@ -10,11 +10,11 @@ function changeImages(theme: string) {
   if (theme === "dark") {
     star = "/icons/whiteStar.svg";
     wavy = "/icons/whiteWavy.svg";
-    profile = "/images/profileDark.png";
+    profile = "/images/profileDark.webp";
   } else {
     star = "/icons/darkStar.svg";
     wavy = "/icons/darkWavy.svg";
-    profile = "/images/profile.png";
+    profile = "/images/profile.webp";
   }
 }
 
