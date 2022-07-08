@@ -8,7 +8,7 @@ export const Container = styled.div`
   max-width: 1920px;
   overflow-x: hidden;
   background: ${(props) => props.theme.colors.background + "aa"};
-
+  box-shadow: 0 0 60px 10px #00000050;
   /* @media (max-width: ${theme.screenSize.desktop}) {
     padding: 0 4vw;
   } */

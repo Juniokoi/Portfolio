@@ -24,6 +24,7 @@ export const Section = styled.div<SectionProps>`
   /* width: 100%; */
   border: 2px solid ${(props) => props.BorderColor};
   border-radius: 15px;
+  background-color: ${(props) => props.theme.colors.background};
 
   div {
     display: flex;
