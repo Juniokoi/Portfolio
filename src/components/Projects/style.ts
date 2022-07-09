@@ -89,6 +89,9 @@ export const Container = styled.div`
         width: 150% !important;
         height: auto !important;
       }
+      h5 {
+        font-size: 2rem !important;
+      }
     }
     position: fixed;
     left: 50%;
@@ -180,6 +183,9 @@ export const Container = styled.div`
       margin: 0.5rem;
       width: fit-content;
       --topMarginDistance: -00px;
+    }
+    @media screen and (max-width: 512px) {
+      display: none;
     }
   }
 

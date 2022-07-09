@@ -70,7 +70,7 @@ export const Container = styled.div`
     }
 
     .lastStar {
-      right: -17rem;
+      right: -16rem;
       top: 0;
     }
   }
