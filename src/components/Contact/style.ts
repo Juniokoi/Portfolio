@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    padding: 10rem 0 0;
+    padding: 5rem 0 0;
   }
 `;
 export const Elements = styled.div`

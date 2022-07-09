@@ -67,11 +67,41 @@ export const Container = styled.div`
     .firstStar {
       left: -1rem;
       top: 2rem;
+      animation: rotateFirstStar 8s ease-in-out infinite;
     }
 
     .lastStar {
       right: -16rem;
       top: 0;
+      animation: rotateLastStar 8s ease-in-out infinite;
+    }
+    @keyframes rotateFirstStar {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(-10deg);
+      }
+      75% {
+        transform: rotate(10deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes rotateLastStar {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(10deg);
+      }
+      75% {
+        transform: rotate(-10deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
     }
   }
 `;
