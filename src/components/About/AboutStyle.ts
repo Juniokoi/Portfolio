@@ -24,7 +24,7 @@ export const Container = styled.main`
     }
   }
   @media (max-width: 1024px) {
-    padding: 0 5rem;
+    padding: 0 1rem;
   }
   .ArrowIcon {
     transform: rotate(-45deg);

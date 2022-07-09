@@ -60,6 +60,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     max-width: 297px;
+    width: 100%;
     .typing {
       margin: 0 auto;
     }

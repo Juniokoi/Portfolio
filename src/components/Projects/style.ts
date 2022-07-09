@@ -83,6 +83,13 @@ export const Container = styled.div`
     --border: 6px;
     --cardWidth: 50vw;
     --cardHeight: 80vh;
+    @media screen and (max-width: 648px) {
+      --cardHeight: 95vh;
+      img {
+        width: 150% !important;
+        height: auto !important;
+      }
+    }
     position: fixed;
     left: 50%;
     top: 50%;
@@ -257,7 +264,10 @@ export const Description = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 1rem;
-
+  @media screen and (max-width: 648px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
   a {
     text-decoration: none;
     --borderColor: rgba(165, 139, 244, 0.25);
@@ -281,6 +291,10 @@ export const Description = styled.div`
     h6 {
       filter: opacity(0.7);
       font-style: italic;
+    }
+    @media screen and (max-width: 648px) {
+      margin: 0 auto;
+      width: 100%;
     }
   }
   .Buttons {
