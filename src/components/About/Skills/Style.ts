@@ -21,8 +21,11 @@ export const Container = styled.section<SkillProps>`
   @media (max-width: ${theme.screenSize.desktop}) {
     max-width: 100vw;
     margin: 0 auto;
-    @media screen and (max-width: 1150px) {
-      margin: 0 auto;
+  }
+  @media screen and (max-width: 1150px) {
+    margin: 0 auto;
+    hr {
+      display: none;
     }
   }
   .Glow {
@@ -51,7 +54,7 @@ export const List = styled.ul<SkillProps>`
   border-width: 2px 1px;
   border-color: ${(props) => props.color};
   border-radius: 15px;
-  width: 90%;
+  width: 100%;
   @media screen and (max-width: 1150px) {
     width: 100%;
     margin: 0 auto;

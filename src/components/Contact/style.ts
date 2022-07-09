@@ -128,23 +128,24 @@ export const Caller = styled.div`
     flex-direction: column;
     font-size: 1rem;
     text-align: center;
+  }
   a {
     text-decoration: none;
-  }
-  button {
-    background-color: ${(props) => props.theme.colors.text};
-    margin: 2rem;
-    color: ${(props) => props.theme.colors.background};
-    font-family: ${theme.fonts.body};
-    text-transform: lowercase;
-    font-weight: bolder;
-    font-size: 2rem;
-    height: 3rem;
-    outline: ${(props) => props.theme.colors.text} auto;
-    outline-offset: 4px;
-    outline-width: 2px;
-    @media screen and (max-width: 768px) {
-      font-size: 1rem;
+    button {
+      background-color: ${(props) => props.theme.colors.text};
+      margin: 2rem;
+      color: ${(props) => props.theme.colors.background};
+      font-family: ${theme.fonts.body};
+      text-transform: lowercase;
+      font-weight: bolder;
+      font-size: 2rem;
+      height: 3rem;
+      outline: ${(props) => props.theme.colors.text} auto;
+      outline-offset: 4px;
+      outline-width: 2px;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
     }
   }
 `;
