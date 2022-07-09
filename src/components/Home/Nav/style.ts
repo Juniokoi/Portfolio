@@ -18,6 +18,9 @@ export const Container = styled.nav`
 
     margin-top: 4rem;
     margin-bottom: 8rem;
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 0rem;
+    }
 
     font-family: ${theme.fonts.fat};
 

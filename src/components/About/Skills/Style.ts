@@ -21,6 +21,9 @@ export const Container = styled.section<SkillProps>`
   @media (max-width: ${theme.screenSize.desktop}) {
     max-width: 100vw;
     margin: 0 auto;
+    @media screen and (max-width: 1150px) {
+      margin: 0 auto;
+    }
   }
   .Glow {
     box-shadow: 0 0px 20px 10px ${(props) => props.color + "50"};
@@ -49,6 +52,10 @@ export const List = styled.ul<SkillProps>`
   border-color: ${(props) => props.color};
   border-radius: 15px;
   width: 90%;
+  @media screen and (max-width: 1150px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 // Each skill is an item. ie(Frontend, Backend, Design UI)
@@ -97,6 +104,10 @@ export const Header = styled.div<SkillProps>`
   cursor: pointer;
   user-select: none;
 
+  @media screen and (max-width: 1150px) {
+    width: 100%;
+    margin: 0 auto;
+  }
   .ArrowIcon {
     transition: transform 0.3s ease-in-out !important;
     /* transition-delay: 1s; */
@@ -204,7 +215,7 @@ export const CVButton = styled.div`
   }
   button {
     width: 37%;
-    min-width: 37%;
+    min-width: 250px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -259,6 +270,7 @@ export const CVButton = styled.div`
     @media (max-width: ${theme.screenSize.desktop}) {
       width: 50%;
       align-items: center;
+      margin: 4rem auto;
     }
     @media screen and (max-width: 500px) {
       width: 90%;

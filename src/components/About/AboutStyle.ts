@@ -10,10 +10,21 @@ export const Container = styled.main`
   align-items: start;
   margin-bottom: 220px;
   gap: 5rem;
+  h2 {
+    font-weight: lighter;
+  }
   @media (max-width: 1150px) {
     flex-direction: column;
     gap: 0;
-    height: 1300px;
+    min-height: 1300px;
+    height: auto;
+    margin: 0 auto;
+    h2 {
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 1024px) {
+    padding: 0 5rem;
   }
   .ArrowIcon {
     transform: rotate(-45deg);
@@ -32,6 +43,7 @@ export const Container = styled.main`
 
     @media (max-width: ${theme.screenSize.tablet}) {
       font-size: 3rem;
+      margin: 0 auto;
     }
   }
 
@@ -41,7 +53,7 @@ export const Container = styled.main`
     /* background-color: ${(props) => props.theme.colors.text}; */
     border: 1px solid ${(props) => props.theme.colors.text};
     height: 2px;
-    @media (max-width: ${theme.screenSize.tablet}) {
+    @media (max-width: ${theme.screenSize.desktop}) {
       display: none;
     }
   }

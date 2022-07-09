@@ -13,6 +13,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     gap: 3rem;
+    @media screen and (max-width: 1300px) {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
   }
   .Header {
     display: flex;
@@ -29,6 +34,20 @@ export const Container = styled.div`
       width: 84px;
       fill: ${(props) => props.theme.colors.text};
     }
+    @media screen and (max-width: 1300px) {
+      position: relative;
+      left: -35px;
+      @media screen and (max-width: 600px) {
+        font-size: 2rem;
+        line-height: 3rem;
+        svg {
+          top: -1rem;
+          left: 3.5rem;
+          height: 64px;
+          width: 64px;
+        }
+      }
+    }
   }
   .Body {
     align-self: flex-end;
@@ -38,6 +57,17 @@ export const Container = styled.div`
       font-size: 1.5rem;
       align-self: flex-end;
       font-family: ${theme.fonts.body};
+    }
+    @media screen and (max-width: 1300px) {
+      align-self: center;
+      p {
+        text-align: center;
+        align-self: center;
+        width: auto;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+      margin: 0;
     }
   }
   hr {
@@ -120,7 +150,7 @@ export const Container = styled.div`
     position: relative;
     top: var(--topMarginDistance);
 
-    width: auto;
+    width: 100%;
     height: auto;
 
     padding: 10px 1rem;
@@ -138,25 +168,41 @@ export const Container = styled.div`
     border-radius: 15px;
     background: rgba(255, 255, 255, 1);
     cursor: pointer;
+
+    @media screen and (max-width: 1100px) {
+      margin: 0.5rem;
+      width: fit-content;
+      --topMarginDistance: -00px;
+    }
   }
 
   .swiper-pagination-bullet-active {
     color: #000;
     background: #d2c5f9;
     box-shadow: 0 8px 12px 0 #00000060;
-    position: relative !important;
-    font-weight: 900px !important;
-    top: calc(var(--topMarginDistance) - 16px);
+
+    top: var(--topMarginDistance);
+    transform: scale(1.2);
+    transition: all 300ms ease;
+    @media screen and (max-width: 512px) {
+      transform: scale(1.2);
+      transition: all 300ms ease;
+      top: var(--topMarginDistance);
+      z-index: 6;
+    }
   }
   overflow-x: hidden !important;
 
   /** Carousel styles */
   .swiper {
     width: 100%;
-    height: 120%;
+    height: 100%;
     margin: 150px auto;
     overflow: visible !important;
-    overflow-y: visible;
+    overflow-y: visible !important;
+    @media screen and (max-width: 1100px) {
+      margin: 50px auto;
+    }
   }
   .swiper-slide {
     text-align: center;
@@ -170,7 +216,16 @@ export const Container = styled.div`
     background-color: #d2c5f9;
     border-radius: 25px;
 
+    width: fit-content;
     height: 400px;
+    @media screen and (max-width: 1100px) {
+      height: 300px;
+      width: auto;
+      background-color: transparent;
+      @media screen and (max-width: 600px) {
+        height: 200px;
+      }
+    }
   }
 `;
 export const MainCard = styled.img<imgProps>`

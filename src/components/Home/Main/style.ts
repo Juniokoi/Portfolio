@@ -93,6 +93,7 @@ export const Wrapper = styled.div`
     @media (max-width: ${theme.screenSize.tablet}) {
       img.profile {
         width: auto;
+        margin-top: 100px;
       }
       padding: 0;
 

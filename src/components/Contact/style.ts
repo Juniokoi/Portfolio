@@ -25,6 +25,9 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    padding: 10rem 0 0;
+  }
 `;
 export const Elements = styled.div`
   padding: 3rem 8rem;
@@ -35,8 +38,17 @@ export const Elements = styled.div`
   width: 80%;
   box-shadow: 0 0 40px 9px ${(props) => props.theme.colors.background};
   border-radius: 10px;
+  @media screen and (max-width: 1070px) {
+    padding: 3rem 1rem;
+  }
 `;
 export const Header = styled.div`
+  @media screen and (max-width: 1700px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -45,6 +57,13 @@ export const Header = styled.div`
     font-weight: lighter;
     font-size: 6rem;
     line-height: 6rem;
+    @media screen and (max-width: 1080px) {
+      font-size: 3rem;
+      line-height: 3rem;
+      @media (max-width: 578px) {
+        font-size: 2rem;
+      }
+    }
   }
   section {
     font-family: ${theme.fonts.body};
@@ -55,14 +74,34 @@ export const Header = styled.div`
     margin-top: 1rem;
     h3 {
       font-size: 2rem;
+      @media screen and (max-width: 1700px) {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0 auto;
+      }
     }
     ul {
       font-size: 1.5rem;
       display: contents;
+      @media screen and (max-width: 1700px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        margin: 0 auto;
+        @media screen and (max-width: 578px) {
+          text-align: center;
+        }
+      }
       a {
         text-decoration: none;
-        &:hover{
+        &:hover {
           transform: translateY(-4px);
+        }
+        @media screen and (max-width: 1700px) {
+          &:hover {
+            transform: none;
+          }
         }
       }
       li {
@@ -76,7 +115,6 @@ export const Header = styled.div`
         width: fit-content;
         color: ${(props) => props.theme.colors.background};
       }
-      }
     }
   }
 `;
@@ -86,6 +124,10 @@ export const Caller = styled.div`
   font-size: 2rem;
   font-family: ${theme.fonts.body};
   font-weight: bolder;
+  @media screen and (max-width: 1370px) {
+    flex-direction: column;
+    font-size: 1rem;
+    text-align: center;
   a {
     text-decoration: none;
   }
@@ -101,6 +143,9 @@ export const Caller = styled.div`
     outline: ${(props) => props.theme.colors.text} auto;
     outline-offset: 4px;
     outline-width: 2px;
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 `;
 

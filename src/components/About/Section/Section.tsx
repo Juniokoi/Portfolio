@@ -2,6 +2,7 @@ import * as React from "react";
 import { Container, Section } from "./SectionStyle";
 import { ThemeContext } from "styled-components";
 import { SkillContext } from "../SkillContext";
+import { ScrollArea } from "@mantine/core";
 
 export default function AboutSection() {
   const { TextColor } = React.useContext(SkillContext);
@@ -13,8 +14,15 @@ export default function AboutSection() {
         Sobre <span className="bodyFont">mim</span>.
       </h2>
       <hr />
+
       <Section color={colors.text} BorderColor={TextColor}>
-        <AboutText />
+        <ScrollArea
+          type="always"
+          offsetScrollbars={true}
+          style={{ height: 500 }}
+        >
+          <AboutText />
+        </ScrollArea>
       </Section>
     </Container>
   );

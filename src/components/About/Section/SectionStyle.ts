@@ -25,26 +25,28 @@ export const Section = styled.div<SectionProps>`
   border: 2px solid ${(props) => props.BorderColor};
   border-radius: 15px;
   background-color: ${(props) => props.theme.colors.background};
-
-  div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    h3 {
-      display: inline;
-      width: 100px;
-      font-family: ${theme.fonts.body};
-      font-size: 1.5rem;
+  .mantine-ScrollArea-thumb {
+    background-color: ${(props) => props.theme.colors.text + "99"};
+    position: relative;
+    &:hover {
+      background-color: ${(props) => props.theme.colors.text + "99"} !important;
     }
-  } // end of div
+  }
+  .mantine-ScrollArea-corner {
+    background-color: ${(props) => props.theme.colors.background};
+  }
+
+  .mantine-1r7b8iq:hover {
+    background-color: ${(props) => props.theme.colors.background};
+  }
+  max-width: 600px;
 
   p {
     font-size: 1.5rem;
     font-family: ${theme.fonts.body};
     text-align: justify;
 
+    padding-right: 8px;
     &:not(:last-child) {
       margin-bottom: 1.5rem;
     }

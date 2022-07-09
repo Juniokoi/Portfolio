@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay, EffectCoverflow } from "swiper";
 
+import { useViewportSize } from "@mantine/hooks";
 import { PaginationOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,8 +10,18 @@ import "swiper/css/navigation";
 
 import { Card } from "./Card";
 import { MainCard } from "./style";
-
 const Carousel = () => {
+  const { height, width } = useViewportSize();
+  const [slideNumber, setSlideNumber] = useState(3);
+  let SlideNumber = 3;
+  useEffect(() => {
+    if (width > 1100) {
+      setSlideNumber(3);
+    } else {
+      setSlideNumber(1);
+    }
+  }, [width]);
+
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = (index: number) => {
@@ -39,13 +50,13 @@ const Carousel = () => {
     <>
       <Swiper
         effect="coverflow"
-        slidesPerView={3}
+        slidesPerView={slideNumber}
         spaceBetween={240}
         centeredSlides={true}
         centeredSlidesBounds={true}
         grabCursor={true}
         autoplay={{
-          delay: 1000,
+          delay: 9000,
           disableOnInteraction: false,
         }}
         coverflowEffect={{
