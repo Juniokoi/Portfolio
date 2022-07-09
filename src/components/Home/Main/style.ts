@@ -32,6 +32,7 @@ export const Container = styled.div`
     position: relative;
     left: -4rem;
     top: 4rem;
+    animation: rotateFirstStar 6s ease-in-out infinite;
   }
 
   .lastStar {
@@ -39,6 +40,7 @@ export const Container = styled.div`
     right: -1rem;
     top: 2rem;
     max-width: 270px;
+    animation: rotateLastStar 8s ease-in-out infinite;
   }
 
   .wavy {
@@ -56,6 +58,98 @@ export const Container = styled.div`
     text-align: center;
     width: 100%;
   }
+  @keyframes rotateFirstStar {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes rotateLastStar {
+    0% {
+      transform: rotate(0deg);
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "30"} 0%,
+        transparent 30%
+      );
+    }
+    10% {
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "80"} 0%,
+        transparent 20%
+      );
+    }
+    20% {
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "aa"} 0%,
+        transparent 30%
+      );
+    }
+    25% {
+      transform: rotate(10deg);
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "cc"} 0%,
+        transparent 30%
+      );
+    }
+    30% {
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "ff"} 0%,
+        transparent 30%
+      );
+    }
+    40% {
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "bb"} 0%,
+        transparent 20%
+      );
+    }
+    50% {
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "30"} 0%,
+        transparent 50%
+      );
+    }
+    60% {
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "ff"} 0%,
+        transparent 30%
+      );
+    }
+    75% {
+      transform: rotate(-10deg);
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "aa"} 0%,
+        transparent 10%
+      );
+    }
+    80% {
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "30"} 0%,
+        transparent 40%
+      );
+    }
+    90% {
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text + "bb"} 0%,
+        transparent 20%
+      );
+    }
+    100% {
+      transform: rotate(0deg);
+      background: radial-gradient(
+        ${(props) => props.theme.colors.text} 0%,
+        transparent 50%
+      );
+    }
+  }
   @media (max-width: ${theme.screenSize.desktop}) {
     justify-content: center;
     align-items: center;
@@ -67,41 +161,14 @@ export const Container = styled.div`
     .firstStar {
       left: -1rem;
       top: 2rem;
-      animation: rotateFirstStar 8s ease-in-out infinite;
+      transition: all 0.3s;
     }
 
     .lastStar {
       right: -16rem;
       top: 0;
       animation: rotateLastStar 8s ease-in-out infinite;
-    }
-    @keyframes rotateFirstStar {
-      0% {
-        transform: rotate(0deg);
-      }
-      25% {
-        transform: rotate(-10deg);
-      }
-      75% {
-        transform: rotate(10deg);
-      }
-      100% {
-        transform: rotate(0deg);
-      }
-    }
-    @keyframes rotateLastStar {
-      0% {
-        transform: rotate(0deg);
-      }
-      25% {
-        transform: rotate(10deg);
-      }
-      75% {
-        transform: rotate(-10deg);
-      }
-      100% {
-        transform: rotate(0deg);
-      }
+      transition: all 0.2s ease-in-out !important;
     }
   }
 `;
