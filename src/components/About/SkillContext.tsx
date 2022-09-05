@@ -10,10 +10,10 @@ interface IskillTheme {
 export const SkillContext = createContext({} as IskillTheme);
 function SkillContextProvider(props: any) {
   const { colors } = useContext(ThemeContext);
-  const TextColorScheme = ["#d2c5f9", "#ffb6b6", "#f8fabe", `${colors.text}`];
+  const TextColorScheme = ["#ffb6b6","#d2c5f9", "#f8fabe", `${colors.text}`];
   const BackgroundColorScheme = [
-    "#d2c5f9",
     "#ffb6b6",
+    "#d2c5f9",
     "#f8fabe",
     `${colors.background}`,
   ];

@@ -8,7 +8,7 @@ export const Container = styled.main`
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  margin-bottom: 220px;
+  margin-bottom: 370px;
   gap: 5rem;
   h2 {
     font-weight: lighter;
@@ -50,7 +50,6 @@ export const Container = styled.main`
   hr {
     position: relative;
     top: -1rem;
-    /* background-color: ${(props) => props.theme.colors.text}; */
     border: 1px solid ${(props) => props.theme.colors.text};
     height: 2px;
     @media (max-width: ${theme.screenSize.desktop}) {

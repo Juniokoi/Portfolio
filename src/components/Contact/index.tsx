@@ -34,7 +34,7 @@ export function Contact() {
 }
 const interests = [
   {
-    title: "Desenvolvimento Front-end",
+    title: "Desenvolvimento Backend/Frontend",
     subject: "I really love pizza",
   },
   {

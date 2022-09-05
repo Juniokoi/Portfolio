@@ -55,8 +55,8 @@ export const Container = styled.div`
   .typing {
     margin: 4rem 0;
     height: 200px;
-    text-align: center;
-    width: 100%;
+    text-align: start;
+    width: 130%;
   }
   @keyframes rotateFirstStar {
     0% {

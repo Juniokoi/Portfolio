@@ -16,6 +16,7 @@ export const Code = styled.p`
   color: ${(props) => props.theme.colors.correct};
   max-height: 100px;
   font-weight: "700";
+  text-align: start;
 
   .end-cursor:after {
     content: "|";

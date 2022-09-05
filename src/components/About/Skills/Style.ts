@@ -58,6 +58,7 @@ export const List = styled.ul<SkillProps>`
   @media screen and (max-width: 1150px) {
     width: 100%;
     margin: 0 auto;
+    height: 100%;
   }
 `;
 
