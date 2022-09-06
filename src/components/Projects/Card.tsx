@@ -19,8 +19,8 @@ const Item = [
     description:
       "Landing page project made as a challenge to develop my JavaScript skills",
     image: "Projects/CardRocketCoffee.webp",
-    github: "https://juniokoi.github.io/RocketCoffee/",
-    website: "https://github.com/Juniokoi/RocketCoffee",
+    github: "https://github.com/Juniokoi/RocketCoffee",
+    website: "https://juniokoi.github.io/RocketCoffee/",
   },
   {
     title: "Tindog",
