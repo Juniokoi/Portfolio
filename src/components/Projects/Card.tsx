@@ -7,6 +7,13 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import ShortcutRoundedIcon from "@mui/icons-material/ShortcutRounded";
 const Item = [
   {
+    title: "Potodo",
+    description: "Aplicativo de Pomodoro com Todo-list",
+    image: "Projects/CardPotodo.webp",
+    github: "https://github.com/Juniokoi/Potodo",
+    website: "https://potodo.live",
+  },
+  {
     title: "Feedget",
     description:
       "Este projeto foi desenvolvido com o intuito de facilitar a coleta de feedbacks dos usuários, que em vez do usuário ter que enviar um email todo específico, basta clicar no widget no canto de sua tela e já abrira um menu de itens de tópicos que deseja tratar, tudo de maneira fácil e direta.",
@@ -15,20 +22,11 @@ const Item = [
     website: "https://feedget-landingpage.vercel.app/",
   },
   {
-    title: "Rocket Coffee",
-    description:
-      "Landing page project made as a challenge to develop my JavaScript skills",
-    image: "Projects/CardRocketCoffee.webp",
-    github: "https://github.com/Juniokoi/RocketCoffee",
-    website: "https://juniokoi.github.io/RocketCoffee/",
-  },
-  {
-    title: "Tindog",
-    description:
-      "Um landing page simples para treinar minhas habilidades com Bootstrap, Gulp e SCSS",
-    image: "Projects/CardTindog.webp",
-    github: "https://github.com/Juniokoi/Tindog",
-    website: "https://juniokoi.github.io/Tindog/src/index.html",
+    title: "Meu portfólio",
+    description: "Esse portfólio foi feito com React e Styled Components",
+    image: "Projects/CardPortfolio.webp",
+    github: "https://github.com/Juniokoi/Portfolio",
+    website: "#",
   },
 ];
 

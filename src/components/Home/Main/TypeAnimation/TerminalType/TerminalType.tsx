@@ -17,8 +17,8 @@ const TerminalType = (
   const [typedString, setTypedString] = React.useState("");
   const [stringIndex, setStringIndex] = React.useState(0);
 
-  const TYPING_INTERVAL = 75;
-  const WAITING_INTERVAL = 3000;
+  const TYPING_INTERVAL = 50;
+  const WAITING_INTERVAL = 2000;
   const DELETING_INTERVAL = TYPING_INTERVAL / 2;
 
   React.useEffect(() => {

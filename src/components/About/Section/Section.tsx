@@ -32,21 +32,11 @@ function AboutText() {
   return (
     <>
       <p>
-        Fabio Junio “Koi” dos Santos é um jovem rapaz que teve seu primeiro
-        contato ao customizar sua página no Tumblr em meados de 2013, porém, foi
-        cursando Engenharia Elétrica ao estudar a linguagem C que descobriu que
-        sua vocação é realmente programação!
-      </p>
-      <p>
-        Desde então vem dedicando-se com diversos cursos e bootcamps afim de
-        criar PWAs mais eficientes, chamativas (no bom sentido) e com
-        acessibilidade.
-      </p>
-      <p>
-        Ama arte, cores e afins, sempre se inspirando e trazendo elementos aos
-        seus websites feitos além de fazer publicações semanais sobre tópicos
-        que acha necessário e útil para ajudar outros desenvolvedores na trilha
-        da programação.
+        Sou desenvolvedor Fullstack orientado a frontend com experiências em
+        bibliotecas e frameworks como Angular, Vue e React, além de
+        conhecimento amplo em Design, UI/UX e ferramentas como Figma,
+        Illustrator, Photoshop e outros. No backend tenho proficiência em Java
+        e Spring, boa experiência em GIT e conhecimento de metodologias ágeis.
       </p>
     </>
   );

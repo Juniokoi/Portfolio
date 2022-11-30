@@ -35,9 +35,19 @@ const SkillTypes = [
       "De simples HTML até JSX, utilizo estas ferramentas para criar soluções que aliam design, acessibilidade e responsividade",
     skills: [
       {
-        title: ".JS",
-        img: "javascript",
-        alias: "ícone do JavaScript",
+        title: ".TS",
+        img: "typescript",
+        alias: "ícone do Typescript",
+      },
+      {
+        title: "Angular",
+        img: "angular",
+        alias: "ícone do React",
+      },
+      {
+        title: "Vue",
+        img: "vue",
+        alias: "ícone do React",
       },
       {
         title: "React",

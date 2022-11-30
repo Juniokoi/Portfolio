@@ -2,7 +2,11 @@ import * as React from "react";
 import { Code, CodeBracket } from "./style";
 import TerminalType, { typePhase } from "./TerminalType/TerminalType";
 import cn from "classnames";
-const strings = [ "Desenvolvedor Java Backend☕","Centralizador de divs","Amante de um bom café"];
+const strings = [
+  "Desenvolvedor Fullstack ✨",
+  "Centralizador de divs",
+  "Amante de um bom café",
+];
 
 export default function TypeAnimation() {
   const { typedString, selectedString, phase } = TerminalType(strings);

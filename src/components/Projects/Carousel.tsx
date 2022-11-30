@@ -32,9 +32,9 @@ const Carousel = () => {
   const [bulletPointClass, ProjectName] = [
     "bullet-point",
     [
+      ["Potodo", "Projects/Potodo.webp", "#042D71"],
       ["Feedget", "Projects/Feedget.webp", "#8257E6"],
-      ["Rocket Coffee", "Projects/RocketCoffee.webp", "#042D71"],
-      ["Tindog", "Projects/Tindog.webp", "#F7E6EE"],
+      ["Porfólio", "Projects/Portfolio.webp", "#F7E6EE"],
     ],
   ];
 
