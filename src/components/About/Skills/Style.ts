@@ -2,11 +2,11 @@ import styled from "styled-components";
 import theme from "../../../styles";
 
 type SkillProps = {
-  isExpanded?: boolean;
-  color?: string;
-  itemColor?: string;
-  backgroundColor?: string;
-  isDark?: boolean;
+    isExpanded?: boolean;
+    color?: string;
+    itemColor?: string;
+    backgroundColor?: string;
+    isDark?: boolean;
 };
 // Defines the major structure of this component
 export const Container = styled.section<SkillProps>`
@@ -31,9 +31,9 @@ export const Container = styled.section<SkillProps>`
   .Glow {
     box-shadow: 0 0px 20px 10px ${(props) => props.color + "50"};
     ${(props) =>
-      props.isDark
-        ? ` color: ${props.theme.colors.background};`
-        : ` color: ${props.theme.colors.text} ;  `}
+        props.isDark
+            ? ` color: ${props.theme.colors.background};`
+            : ` color: ${props.theme.colors.text} ;  `}
   }
   .baseBgColor {
     background-color: ${(props) => props.theme.colors.background};
@@ -41,9 +41,9 @@ export const Container = styled.section<SkillProps>`
   .insideBorder,
   .insideBorder * {
     ${(props) =>
-      props.isDark
-        ? ` border-color: ${props.theme.colors.background} !important;`
-        : ` border-color: ${props.theme.colors.text} !important;`}
+        props.isDark
+            ? ` border-color: ${props.theme.colors.background} !important;`
+            : ` border-color: ${props.theme.colors.text} !important;`}
   }
 `;
 
@@ -85,9 +85,9 @@ export const ListItem = styled.li<SkillProps>`
   &:hover {
     background-color: ${(props) => props.itemColor};
     ${(props) =>
-      props.isDark
-        ? `color: ${props.theme.colors.background} ;`
-        : ` color: ${props.theme.colors.text} ;  `}
+        props.isDark
+            ? `color: ${props.theme.colors.background} ;`
+            : ` color: ${props.theme.colors.text} ;  `}
   }
 
   &:not(:last-child) {
@@ -116,9 +116,9 @@ export const Header = styled.div<SkillProps>`
     transition: transform 0.3s ease-in-out !important;
     /* transition-delay: 1s; */
     ${(props) =>
-      props.isExpanded
-        ? `transform: rotate(0deg) !important;`
-        : `transform: rotate(-45deg) !important;`}
+        props.isExpanded
+            ? `transform: rotate(0deg) !important;`
+            : `transform: rotate(-45deg) !important;`}
   }
 `;
 

@@ -16,28 +16,28 @@ import Projects from "./components/Projects";
 import { Contact } from "./components/Contact";
 
 export default function Home() {
-  const [theme, setTheme] = useState(dark);
+    const [theme, setTheme] = useState(dark);
 
-  function toggleTheme() {
-    setTheme(theme === dark ? light : dark);
-  }
+    function toggleTheme() {
+        setTheme(theme === dark ? light : dark);
+    }
 
-  return (
-    <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
+    return (
+        <>
+            <ThemeProvider theme={theme}>
+                <GlobalStyles />
 
-        <Container>
-          <div className="header">
-            <Header toggleTheme={toggleTheme} />
-            <Main />
-            <Nav />
-          </div>
-          <About />
-          <Projects />
-          <Contact />
-        </Container>
-      </ThemeProvider>
-    </>
-  );
+                <Container>
+                    <div className="header">
+                        <Header toggleTheme={toggleTheme} />
+                        <Main />
+                        <Nav />
+                    </div>
+                    <About />
+                    <Projects />
+                    <Contact />
+                </Container>
+            </ThemeProvider>
+        </>
+    );
 }

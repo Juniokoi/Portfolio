@@ -5,14 +5,14 @@ import SkillContextProvider from "./SkillContext";
 import { Container } from "./AboutStyle";
 
 export default function About() {
-  return (
-    <>
-      <Container id="about">
-        <SkillContextProvider>
-          <Section />
-          <Skills />
-        </SkillContextProvider>
-      </Container>
-    </>
-  );
+    return (
+        <>
+            <Container id="about">
+                <SkillContextProvider>
+                    <Section />
+                    <Skills />
+                </SkillContextProvider>
+            </Container>
+        </>
+    );
 }

@@ -62,6 +62,6 @@ export const Section = styled.div<SectionProps>`
 `;
 
 interface SectionProps {
-  color: string;
-  BorderColor: string;
+    color: string;
+    BorderColor: string;
 }
